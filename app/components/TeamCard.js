@@ -87,12 +87,10 @@ function TeamCard({ imgsrc, posts, name, li, email, stu }) {
       <div className="bottom">
         <div className={`content ${stu ? "smallcontent" : ""}`}>
           {posts.map((post) => (
-            <>
-              <span key={post} className={`${stu ? "stuabout" : "about-me"}`}>
-                {post}
-              </span>
+            <div key={post}>
+              <span className={`${stu ? "stuabout" : "about-me"}`}>{post}</span>
               <br />
-            </>
+            </div>
           ))}
           <span className={`${stu ? "stuname" : "name"}`}>{name}</span>
         </div>

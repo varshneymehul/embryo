@@ -6,14 +6,13 @@ const Heading = (props) => {
   const [animationRequestId, setAnimationRequestId] = useState(null);
   const [scrollCount, setScrollCount] = useState(0);
 
-  const handleScroll = (event) => {
-    const newScrollLeft = props.scrollLeft;
-    setTilt(-event.deltaY / 10);
-    setScrollLeft(newScrollLeft);
-    setScrollCount((prevCount) => prevCount + 1);
-  };
-
   useEffect(() => {
+    const handleScroll = (event) => {
+      const newScrollLeft = props.scrollLeft;
+      setTilt(-event.deltaY / 10);
+      setScrollLeft(newScrollLeft);
+      setScrollCount((prevCount) => prevCount + 1);
+    };
     window.addEventListener("wheel", handleScroll);
 
     return () => window.removeEventListener("wheel", handleScroll);

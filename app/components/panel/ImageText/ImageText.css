@@ -1,0 +1,24 @@
+.image-text {
+    width: 25vw;
+    font-weight: 500;
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0vw;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    mix-blend-mode: exclusion;
+    color: white
+}
+
+.image-text--visible {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+.image-text--hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+}

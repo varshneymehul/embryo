@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Analogue";
+  src: url("../public/font/Analogue85Black.otf") format("opentype");
+}
+@font-face {
+  font-family: "Larken";
+  src: url("../public/font/LarkenDEMO-Light.otf") format("opentype");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  max-width: 100%;
+  background: #000;
+}
+::selection {
+  background: #000000b3;
+  text-shadow: #fc0 1px 0 10px;
+}
+.headline {
+  font-family: "Analogue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+}
+
+.inset {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.backdrop-2 {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.344);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 90vw;
+  padding: 5vw;
+}
+.backdrop-lectures {
+  background-image: url("../public/lectures-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(3px);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  -webkit-filter: blur(3px);
+}
+.full {
+  height: 100vh;
+}
+@media (max-width: 1024px) {
+  .full {
+    height: 60vh;
+  }
+}
+.gradient {
+  background: linear-gradient(rgba(14, 62, 151, 0.5) 50%, black);
+}

@@ -1,0 +1,12 @@
+.article {
+  display: flex;
+  width: 80vw;
+  height: min-content;
+  gap: 15px;
+}
+
+.article__main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

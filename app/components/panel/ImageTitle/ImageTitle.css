@@ -1,0 +1,18 @@
+.image-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  text-align: end;
+  position: relative;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  mix-blend-mode: exclusion;
+  color: white;
+  transition: 0.3s;
+}
+
+.image-title:hover {
+  cursor: pointer;
+}

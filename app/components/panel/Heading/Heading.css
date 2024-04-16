@@ -1,0 +1,15 @@
+.heading {
+  margin-left: 15vw;
+  width: 80vw;
+  position: absolute;
+  font-size: 4rem;
+  color: white;
+  text-align: right;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  mix-blend-mode: exclusion;
+  font-weight: 900;
+  font-size: 3rem;
+  z-index: 99;
+  pointer-events: none;
+}

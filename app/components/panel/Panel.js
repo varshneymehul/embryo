@@ -3,6 +3,7 @@ import "./Panel.css";
 import Heading from "./Heading/Heading";
 import Article from "./Article/Article";
 import UnsplashImages from "./ImageData/ImageData";
+import Button from "../Button";
 const Panel = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
 
@@ -32,7 +33,7 @@ const Panel = () => {
         <Heading scrollLeft={scrollLeft} />
         <div className="main-content">{images}</div>
       </div>
-      <button className="btn panelbtn">VIEW ALL</button>
+      <Button text="View More" link="/panels" />
     </>
   );
 };

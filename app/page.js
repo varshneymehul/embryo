@@ -9,7 +9,12 @@ import Button from "./components/Button";
 import Panel from "./components/panel/Panel";
 import PartnerCard from "./apogee-innovation-challenge/components/PartnerCard";
 import partners from "./apogee-innovation-challenge/partner-data";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import { IoIosCall, IoMdMail } from "react-icons/io";
 export default function Home() {
   return (
@@ -105,11 +110,11 @@ export default function Home() {
           engineering in a landscape of future visionaries and scientists.
         </p>
 
-        <div className="w-screen md:flex justify-evenly p-12">
+        <div className="w-screen flex flex-col md:flex-row justify-center md:justify-evenly p-12">
           <AicCard
             heading={"What is AIC?"}
             content={[
-              "Problem statement released By companies",
+              "Problem statement released by companies",
               "Students form teams of 1 to 3 members",
               "Teams select problem statements and start working on it. They have to submit the solution before the specified deadline.",
               "Judges from companies select top 5 teams",
@@ -136,10 +141,10 @@ export default function Home() {
         <Button text={"Read More"} link={"/apogee-innovation-challenge"} />
       </section>
 
-      <section id="team" className="m-16">
+      <section id="team" className="my-12 mx-4 md:m-16">
         <h1 className="text-4xl text-center font-serif md:text-6xl">TEAM</h1>
 
-        <div className="flex justify-center m-12">
+        <div className="flex justify-center m-4 md:m-12">
           <TeamCard
             stu={false}
             imgsrc="http://embryo.bits-pilani.ac.in/img/team/prof.jpeg"
@@ -150,7 +155,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="md:grid md:grid-cols-4 md:gap-10">
+        <div className="grid w-screen grid-cols-2 md:grid-cols-4 md:gap-10">
           <TeamCard
             stu={true}
             imgsrc="http://embryo.bits-pilani.ac.in/img/team/nishit.jpg"
@@ -218,12 +223,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="w-1/2">
+      <section id="contact" className="md:w-1/2 m-6 md:m-12">
         <h1 className="text-4xl text-center font-serif md:text-6xl">
           CONTACT US
         </h1>
 
-        <div className="m-16">
+        <div className="m-8 md:m-16">
           <div className="grid grid-cols-[20%_80%] h-16 mx-auto items-center justify-center">
             <div className="justify-center flex">
               <FaMapMarkerAlt className="text-3xl m-4" />
@@ -257,6 +262,30 @@ export default function Home() {
               </a>
             </div>
           </div>
+        </div>
+
+        <div className="mx-auto flex text-xl md:text-3xl justify-center gap-5">
+          <a
+            href="https://www.facebook.com/EmbryoClub/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaFacebook className="cursor-pointer  transition-all  hover:text-blue-500" />
+          </a>
+          <a
+            href="https://www.instagram.com/bitsembryo/?hl=en"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FaInstagram className="cursor-pointer  transition-all  hover:text-pink-500" />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/embryo-bits/mycompany/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FaLinkedin className="cursor-pointer  transition-all  hover:text-blue-800" />
+          </a>
         </div>
       </section>
     </main>

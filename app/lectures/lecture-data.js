@@ -52,13 +52,12 @@ const lecturesData = [
     linkedin: "https://www.linkedin.com/in/vinay-dubey/?originalSubdomain=in",
   },
   {
-    title:
-      "Fostering Entrepreneurship through Public Policy<br> <br>Anil Agrawal",
+    title: "Fostering Entrepreneurship through Public Policy",
     name: "Anil Agrawal",
     description:
       "Anil Agrawal is a BITS Alumnus who started out as a software engineer in 1984, but shifted to IPS and served as DGP of UP Police. He went on to establish ONDC, thus democratising e-commerce. He was awarded the President’s Police Medal for Distinguished Service and Police Medal for Meritorious Service",
     recordingUrl: "",
-    imgSrc: "/img/lec/anil&#32;agrawal.jpeg",
+    imgSrc: "/img/lec/anil agrawal.jpeg",
     date: "9 September, 2023",
     linkedin: "https://www.linkedin.com/in/anilagrawal/?originalSubdomain=in",
   },
@@ -68,7 +67,7 @@ const lecturesData = [
     description:
       "Raju Reddy is a BITS alumnus with a bachelors in Electrical Engg. He is the founder and former CEO of Sierra Atlantic. Other board roles include Eltropy, SciSpace, Redbus, Gray Orange, Hitachi, etc. ",
     recordingUrl: "",
-    imgSrc: "/img/lec/raju&#32;reddy.png",
+    imgSrc: "/img/lec/raju reddy.png",
     date: "3 September, 2023",
     linkedin: "https://www.linkedin.com/in/rajureddy",
   },

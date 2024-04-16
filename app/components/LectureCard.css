@@ -8,14 +8,19 @@
   overflow: hidden;
 }
 .prevmain h2 {
-  margin-left: 200px;
+  margin-left: 10vw;
   font-size: 2em;
   font-family: "Analogue", Helvetica, Arial, sans-serif;
   color: #fff;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 768px) {
+  .prevmain h2 {
+    font-size: 1rem;
+  }
+}
 .box {
-  width: 79%;
+  width: 80%;
 }
 .prevmain .container {
   position: relative;
@@ -90,6 +95,11 @@
   transition: all ease-in-out 0.3s;
   overflow: hidden;
 }
+@media (max-width: 767.98px){
+  .card{
+    height: 30vh;
+  }
+}
 .large {
   width: 43vw;
   height: 21.18vw;
@@ -113,7 +123,6 @@
   color: #fff;
   cursor: default;
 }
-
 .card-des {
   margin: 1rem 0;
   font-size: 1.2rem;
@@ -192,9 +201,9 @@
   width: 12.19em;
   height: 3.3em;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .prevmain .container .imgBx {
-    height: 20rem;
+    height: 25vh;
   }
   .content {
     transform: translateY(100px);

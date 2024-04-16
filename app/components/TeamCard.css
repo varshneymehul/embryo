@@ -25,6 +25,10 @@
   -moz-border-radius: 2rem;
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .cardteam .mail {
@@ -89,9 +93,9 @@
 
 .cardteam .bottom {
   position: absolute;
-  bottom: 3px;
-  left: 3px;
-  right: 3px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: rgba(26, 26, 26, 0.58);
   backdrop-filter: blur(5px);
   top: 80%;
@@ -99,11 +103,11 @@
   z-index: 1;
   box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px inset;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   -webkit-border-radius: 1.5rem;
   -moz-border-radius: 1.5rem;
   -ms-border-radius: 1.5rem;
   -o-border-radius: 1.5rem;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   -moz-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   -ms-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
@@ -215,8 +219,8 @@
   transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
 }
 .cardteam:hover .smallpic {
-  width: 100px;
-  height: 100px;
+  width: 100px !important;
+  height: 100px !important;
   aspect-ratio: 1;
   top: 10px;
   left: 10px;
@@ -227,41 +231,61 @@
   transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
 }
 @media (max-width: 1024px) {
+  .cardteam {
+    height: 50vw;
+    width: 40vw;
+    margin: 1rem;
+  }
   .cardteam .bottom {
-    width: 93%;
-    margin-left: 5px;
+    width: 100%;
+    top: 85%;
   }
   .cardteam .button {
     width: 6.5rem;
+  }
+  .small {
+    height: 40vw;
+    width: 80%;
+  }
+  .cardteam .bottom .content {
+    position: relative;
+    bottom: -100%;
+    height: 160px;
+    text-align: center;
+  }
+  .cardteam:hover .bottom .content {
+    bottom: 5vw;
   }
   .cardteam .bottom .bottom-bottom {
     bottom: 0.3rem;
     justify-content: space-between;
     align-items: center;
   }
-  .cardteam .bottom .content {
-    position: absolute;
-    bottom: 1rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    height: 160px;
-    text-align: center;
+  .cardteam .bottom .bottom-bottom button{
+    display: none;
   }
+
   .cardteam .bottom .smallcontent {
     bottom: -2.4rem;
   }
+  
   .cardteam:hover .profile-pic {
-    width: 80px;
-    height: 80px;
+    width: 20vw;
+    height: 20vw;
   }
+  .cardteam:hover .smallpic {
+    width: 15vw;
+    height: 15vw;
+  }
+
   .cardteam .bottom .content .name {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
     font-weight: bold;
   }
   .cardteam .bottom .content .stuname {
-    font-size: 0.8rem;
+    font-size: 3vw;
   }
 
   .cardteam .bottom .content .about-me {
@@ -272,5 +296,16 @@
   }
   .cardteam .bottom .content .stuabout {
     font-size: 0.8rem;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .cardteam .bottom .content {
+    position: relative;
+    bottom: -100%;
+    height: 160px;
+    text-align: center;
+  }
+  .cardteam:hover .bottom .content {
+    bottom: -40%;
   }
 }

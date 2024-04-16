@@ -14,7 +14,7 @@
 }
 @media (max-width: 1024px) {
   #container {
-    height: 55vw;
+    height: 50vh;
   }
 }
 #container img {

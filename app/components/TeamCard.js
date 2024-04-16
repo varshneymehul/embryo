@@ -57,7 +57,7 @@ function TeamCard({ imgsrc, posts, name, li, email, stu }) {
     //   </div>
     // </div>
 
-    <div className={`cardteam ${stu ? "small" : ""}`}>
+    <div className={`cardteam mx-auto ${stu ? "small" : ""}`}>
       <button className="mail">
         <a href={email}>
           <svg

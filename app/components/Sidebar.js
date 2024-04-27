@@ -4,7 +4,7 @@ import React from "react";
 const Sidebar = ({ toggle, handleClick }) => {
   return (
     <div
-      className={`h-screen p-24 top-0 bg-black delay-75 transform transition-all duration-300 ease-in-out fixed w-screen ${
+      className={`h-screen p-24 top-0 bg-black bg-opacity-85 backdrop-blur-2xl delay-75 transform transition-all duration-300 ease-in-out fixed w-screen ${
         toggle ? "translate-x-0" : "translate-x-full"
       }`}
     >

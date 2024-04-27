@@ -11,6 +11,9 @@ module.exports = {
       sans_heading: ["Analogue", "sans-serif"],
     },
     extend: {
+      width: {
+        "1/8": "12.5%",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

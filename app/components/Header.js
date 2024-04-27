@@ -29,7 +29,10 @@ function Header(props) {
   };
   return (
     <header
-      style={{ backdropFilter: `blur(${offset / 50}px)` }}
+      style={{
+        WebkitBackdropFilter: `blur(${offset / 50}px)`,
+        backdropFilter: `blur(${offset / 50}px)`,
+      }}
       className="header flex justify-center"
     >
       <div className="cover flex justify-center">

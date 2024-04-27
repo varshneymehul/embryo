@@ -35,7 +35,7 @@
 .prevmain .container .imgBx {
   position: relative;
   width: 40%;
-  height: 40vw;
+  height: 30vw;
   overflow: hidden;
   box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -95,8 +95,8 @@
   transition: all ease-in-out 0.3s;
   overflow: hidden;
 }
-@media (max-width: 767.98px){
-  .card{
+@media (max-width: 767.98px) {
+  .card {
     height: 30vh;
   }
 }

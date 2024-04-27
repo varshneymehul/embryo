@@ -18,7 +18,7 @@ import {
 import { IoIosCall, IoMdMail } from "react-icons/io";
 export default function Home() {
   return (
-    <main className="flex dark:bg-black flex-col items-center justify-between dark:text-white">
+    <main className="flex flex-col items-center justify-between dark:text-white">
       <ParallaxProvider>
         <AdvancedBannerTop />
       </ParallaxProvider>
@@ -40,7 +40,7 @@ export default function Home() {
         <div className="md:flex md:justify-around">
           <AboutUsCard
             title="VISION"
-            content="Enrich the learning experience at BITS Pilani."
+            content="Enriching the learning experience at BITS Pilani involves fostering academic excellence through updated curricula and promoting innovative teaching methods to engage students actively in their education journey."
           />
           <AboutUsCard
             title="MISSION"
@@ -48,7 +48,7 @@ export default function Home() {
           />
           <AboutUsCard
             title="WHY EMBRYO"
-            content="Embryo aims to transcend limitations of on-campus resources by providing online lectures from expert speakers worldwide. It bridges the gap between knowledge seekers and potential speakers, offering borderless classrooms. Leveraging web technologies, Embryo offers bottomless learning resources, revolutionizing education."
+            content="Embryo aims to transcend limitations of on-campus resources by providing online lectures from expert speakers worldwide. It bridges the gap between knowledge seekers and potential speakers, offering borderless classrooms."
           />
         </div>
 
@@ -133,7 +133,7 @@ export default function Home() {
         <h2 className="text-2xl uppercase mx-16 mt-24 mb-4 text-center font-serif md:text-4xl">
           Our Previous Partners
         </h2>
-        <div className="grid grid-cols-5 mx-4 justify-center align-center ">
+        <div className="flex flex-wrap  mx-4 justify-center align-center ">
           {partners.map((partner, i) => (
             <PartnerCard key={i} imgSrc={partner.logoSrc} name={partner.name} />
           ))}

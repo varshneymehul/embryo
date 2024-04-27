@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+@font-face{
   font-family: "Analogue";
   src: url("../public/font/Analogue85Black.otf") format("opentype");
 }
@@ -17,7 +17,15 @@ body {
   margin: 0;
   height: 100%;
   max-width: 100%;
-  background: #000;
+  color: white;
+  background: rgb(23, 22, 31);
+  background-size: cover;
+  background: radial-gradient(
+    circle,
+    rgba(23, 22, 31, 1) 0%,
+    rgb(15, 15, 16)
+    rgb(18, 19, 20) 100%
+  );
 }
 ::selection {
   background: #000000b3;

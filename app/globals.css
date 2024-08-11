@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face{
+@layer utilities {
+  .paused {
+    animation-play-state: paused;
+  }
+}
+
+@font-face {
   font-family: "Analogue";
   src: url("../public/font/Analogue85Black.otf") format("opentype");
 }
@@ -23,8 +29,7 @@ body {
   background: radial-gradient(
     circle,
     rgba(23, 22, 31, 1) 0%,
-    rgb(15, 15, 16)
-    rgb(18, 19, 20) 100%
+    rgb(15, 15, 16) rgb(18, 19, 20) 100%
   );
 }
 ::selection {
@@ -43,11 +48,9 @@ body {
 }
 .backdrop-2 {
   /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(66, 63, 63, 0.25);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.344);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+
   border: 1px solid rgba(255, 255, 255, 0.3);
   width: 90vw;
   padding: 5vw;

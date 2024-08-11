@@ -1,57 +1,38 @@
-import { Parallax } from "react-scroll-parallax";
 import { FaLinkedin } from "react-icons/fa";
 import "./LectureCard.css";
 import Image from "next/image";
 
 const LectureCard = ({ title, img, linkedin, description, name }) => {
   return (
-    <section className="prevmain mx-auto">
-      <div className="box">
-        <Parallax translateX={[-25, -10]}>
-          <h2>{title}</h2>
-        </Parallax>
-
-        <div className="container">
-          <div className="imgBx jarallax">
-            <Image
-              fill={true}
-              alt="lecturer-img"
-              className="jarallax-img"
-              src={img}
-            />
-          </div>
-          <Parallax translateY={[50, -100]}>
-            <div className="content" data-jarallax-element="-200 0">
-              <div className="card">
-                <p className="card-title">{name}</p>
-                <p className="card-des">{description}</p>
-                <section>
-                  <FaLinkedin className="linked-in" />
-                </section>
-                <p className="card-text">
-                  <span>View More</span>
-                  <svg
-                    className="arrow-icon"
-                    stroke="currentColor"
-                    fillRule="currentColor"
-                    strokeWidth="0"
-                    viewBox="0 0 16 16"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
-                    ></path>
-                  </svg>
-                </p>
-              </div>
-            </div>
-          </Parallax>
-        </div>
+    <div className="md:w-1/4 group rounded-lg p-4 m-2 bg-slate-800 backdrop-blur-lg shadow-3xl shadow-zinc-100">
+      <div>
+        <Image
+          className="object-cover rounded-lg mx-auto h-[40vh]"
+          src={img}
+          alt="lecturer-image"
+          width={300}
+          height={300}
+        />
+        <h1 className="font-sans text-2xl py-4 font-sans_heading">{title}</h1>
       </div>
-    </section>
+
+      <div className="hidden p-3 -ml-4 absolute z-50 h-auto w-full bg-gradient-to-b from-slate-800 to-slate-900 rounded-b-xl group-hover:block  border-zinc-600 border-4">
+        <div className="flex justify-between">
+          <h2 className="font-serif text-xl uppercase">{name}</h2>
+          <p className="text-sm text-gray-400">
+            <a
+              className="text-blue-500 text-2xl hover:text-blue-200 transition-all"
+              href={linkedin}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin />
+            </a>
+          </p>
+        </div>
+        <p className="text-md">{description}</p>
+      </div>
+    </div>
   );
 };
 

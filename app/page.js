@@ -6,9 +6,13 @@ import TeamCard from "./components/TeamCard";
 import AicCard from "./components/AicCard";
 import LectureCard from "./components/LectureCard";
 import Button from "./components/Button";
-import Panel from "./components/panel/Panel";
-import PartnerCard from "./apogee-innovation-challenge/components/PartnerCard";
+
+import PanelCard from "./components/panel/PanelCard";
+import PanelData from "./components/panel/ImageData/ImageData";
+
+import LogoCarousel from "./components/LogoCarousel";
 import partners from "./apogee-innovation-challenge/partner-data";
+import teamdata from "../public/data/team-data";
 import {
   FaFacebook,
   FaInstagram,
@@ -39,15 +43,15 @@ export default function Home() {
         </p>
         <div className="md:flex md:justify-around">
           <AboutUsCard
-            title="VISION"
+            title="Vision"
             content="Enriching the learning experience at BITS Pilani involves fostering academic excellence through updated curricula and promoting innovative teaching methods to engage students actively in their education journey."
           />
           <AboutUsCard
-            title="MISSION"
+            title="Mission"
             content="To make the academic and industrial experience of the BITS alumni accessible to on-campus students through lectures, collaborative research projects, and exposure to current research trends around the world."
           />
           <AboutUsCard
-            title="WHY EMBRYO"
+            title="Why Embryo?"
             content="Embryo aims to transcend limitations of on-campus resources by providing online lectures from expert speakers worldwide. It bridges the gap between knowledge seekers and potential speakers, offering borderless classrooms."
           />
         </div>
@@ -60,43 +64,48 @@ export default function Home() {
         <h1 className="text-4xl text-center font-serif md:text-6xl">
           LECTURES
         </h1>
-        <ParallaxProvider>
-          <div className="flex flex-col overflow-x-hidden w-screen ">
-            <LectureCard
-              title="YIN AND YANG OF PRODUCT INNOVATION"
-              img="http://embryo.bits-pilani.ac.in/img/lec/Piyush-Malik.jpg"
-              name="Dr. Piyush Malik"
-              linkedin="https://www.linkedin.com/in/"
-              description="Piyush Malik is a trailblazing startup executive,entrepreneur, board advisor in the domain of emerging technologies. As Chief Data Officer, his expertise lies in leveraging data-driven innovations to craft immersive customer experiences and optimize operations."
-            />
-            <LectureCard
-              title="HARNESSING GENAI & ML"
-              img="http://embryo.bits-pilani.ac.in/img/lec/anupam_purwar.jpg"
-              name="Anupam Purwar"
-              linkedin="https://www.linkedin.com/in/"
-              description="Anupam is a BITS alumnus with an MBA from ISB. He is a senior research scientist at Amazon Development Center (India). With an expertise in ML, IoT and computational design, he has more than 20 peer reviewed articles with over 200 citations. For more information, visit Anupam's Profile"
-            />
-            <LectureCard
-              title="MYTH TO MATH"
-              img="http://embryo.bits-pilani.ac.in/img/lec/AditiDe.jpg"
-              name="DR. ADITI SEN DE"
-              linkedin="https://www.linkedin.com/in/"
-              description="Prof Aditi Sen De is known for her research on quantum information and computation, quantum communication including quantum cryptography, quantum optics and many-body physics. She is the first female physicist to be awarded the Shanti Swarup Bhatnagar Prize for Science and Technology for her contributions to physical sciences in 2018."
-            />
-            <LectureCard
-              title="AMA ON INVESTMENT BANKING"
-              img="http://embryo.bits-pilani.ac.in/img/lec/alokmisra.jpeg"
-              name="ALOK MISRA"
-              linkedin="https://www.linkedin.com/in/"
-              description="Alok Misra is the COO and Operating Partner of General Atlantic, the world's 9th biggest private equity firm. He was Group Chief Financial Officer of MphasiS BFL Group (now part of the Hewlett-Packard Company) and served in a number of accounting and finance roles at other firms, including I.T.C. Limited and PwC. He is a Fellow Member of the Institute of Chartered Accountants of India."
-            />
-          </div>
-        </ParallaxProvider>
+
+        <div className="md:flex gap-3 m-6 md:m-12">
+          <LectureCard
+            title="YIN AND YANG OF PRODUCT INNOVATION"
+            img="http://embryo.bits-pilani.ac.in/img/lec/Piyush-Malik.jpg"
+            name="Dr. Piyush Malik"
+            linkedin="https://www.linkedin.com/in/"
+            description="Piyush Malik is a trailblazing startup executive,entrepreneur, board advisor in the domain of emerging technologies. As Chief Data Officer, his expertise lies in leveraging data-driven innovations to craft immersive customer experiences and optimize operations."
+          />
+          <LectureCard
+            title="HARNESSING GENAI & ML"
+            img="http://embryo.bits-pilani.ac.in/img/lec/anupam_purwar.jpg"
+            name="Anupam Purwar"
+            linkedin="https://www.linkedin.com/in/"
+            description="Anupam is a BITS alumnus with an MBA from ISB. He is a senior research scientist at Amazon Development Center (India). With an expertise in ML, IoT and computational design, he has more than 20 peer reviewed articles with over 200 citations. For more information, visit Anupam's Profile"
+          />
+          <LectureCard
+            title="MYTH TO MATH"
+            img="http://embryo.bits-pilani.ac.in/img/lec/AditiDe.jpg"
+            name="DR. ADITI SEN DE"
+            linkedin="https://www.linkedin.com/in/"
+            description="Prof Aditi Sen De is known for her research on quantum information and computation, quantum communication including quantum cryptography, quantum optics and many-body physics. She is the first female physicist to be awarded the Shanti Swarup Bhatnagar Prize for Science and Technology for her contributions to physical sciences in 2018."
+          />
+          <LectureCard
+            title="AMA ON INVESTMENT BANKING"
+            img="http://embryo.bits-pilani.ac.in/img/lec/alokmisra.jpeg"
+            name="ALOK MISRA"
+            linkedin="https://www.linkedin.com/in/"
+            description="Alok Misra is the COO and Operating Partner of General Atlantic, the world's 9th biggest private equity firm. He was Group Chief Financial Officer of MphasiS BFL Group (now part of the Hewlett-Packard Company) and served in a number of accounting and finance roles at other firms, including I.T.C. Limited and PwC. He is a Fellow Member of the Institute of Chartered Accountants of India."
+          />
+        </div>
+
         <Button text={"View All"} link={"/lectures"} />
       </section>
 
-      <section id="panel">
-        <Panel />
+      <section id="panel" className="my-16">
+        <div className="md:flex gap-2">
+          {PanelData.map((data) => (
+            <PanelCard key={data.title} {...data} />
+          ))}
+        </div>
+        <Button text="View More" link="/panels" />
       </section>
 
       <section id="aic">
@@ -133,11 +142,7 @@ export default function Home() {
         <h2 className="text-2xl uppercase mx-16 mt-24 mb-4 text-center font-serif md:text-4xl">
           Our Previous Partners
         </h2>
-        <div className="flex flex-wrap  mx-4 justify-center align-center ">
-          {partners.map((partner, i) => (
-            <PartnerCard key={i} imgSrc={partner.logoSrc} name={partner.name} />
-          ))}
-        </div>
+        <LogoCarousel images={partners} speed={20000} />
         <Button text={"Read More"} link={"/apogee-innovation-challenge"} />
       </section>
 
@@ -146,7 +151,6 @@ export default function Home() {
 
         <div className="flex justify-center m-4 md:m-12">
           <TeamCard
-            stu={false}
             imgsrc="http://embryo.bits-pilani.ac.in/img/team/prof.jpeg"
             name="DR. RISHIKESH VAIDYA"
             posts={["Teacher-In-Charge"]}
@@ -155,74 +159,21 @@ export default function Home() {
           />
         </div>
 
-        <div className="grid w-screen grid-cols-2 md:grid-cols-4 md:gap-10">
-          <TeamCard
-            stu={true}
-            imgsrc="http://embryo.bits-pilani.ac.in/img/team/nishit.jpg"
-            name="NISHIT SONI"
-            posts={["President"]}
-            li="https://www.linkedin.com/in/nishit-soni-171058222/"
-            email="mailto:f20210672@pilani.bits-pilani.ac.in"
-          />
-          <TeamCard
-            stu={true}
-            imgsrc="http://embryo.bits-pilani.ac.in/img/team/jainam2.jpg"
-            name="JAINAM HEMANI"
-            posts={["Secretary"]}
-            li="https://www.linkedin.com/in/jainam-hemani/"
-            email="mailto:f20210029@pilani.bits-pilani.ac.in"
-          />
-          <TeamCard
-            stu={true}
-            imgsrc="http://embryo.bits-pilani.ac.in/img/team/thorat.jpg"
-            name="TANISHQ THORAT"
-            posts={["APOGEE Coordinator"]}
-            li="https://www.linkedin.com/in/tanishq-thorat-549a6a22b/"
-            email="mailto:f20212701@pilani.bits-pilani.ac.in"
-          />
-          <TeamCard
-            stu={true}
-            imgsrc="http://embryo.bits-pilani.ac.in/img/team/anish.jpg"
-            name="ANISH HATUA"
-            posts={["OASIS Coordinator"]}
-            li="https://www.linkedin.com/in/anish-hatua/"
-            email="mailto:f20210741@pilani.bits-pilani.ac.in"
-          />
-          <TeamCard
-            stu={true}
-            imgsrc="http://embryo.bits-pilani.ac.in/img/team/sachika.jpeg"
-            name="SACHIKA LALA"
-            posts={["BOSM Coordinator"]}
-            li="https://www.linkedin.com/in/sachika-lala-3b45b9221/"
-            email="mailto:f20212375@pilani.bits-pilani.ac.in"
-          />
-          <TeamCard
-            stu={true}
-            imgsrc="http://embryo.bits-pilani.ac.in/img/team/maitrey.jpg"
-            name="MAITREY PATEL"
-            posts={["Outreach Team Lead", "APOGEE Joint Coordinator"]}
-            li="https://www.linkedin.com/in/maitrey-patel-678529221/"
-            email="mailto:f20210725@pilani.bits-pilani.ac.in"
-          />
-          <TeamCard
-            stu={true}
-            imgsrc="http://embryo.bits-pilani.ac.in/img/team/nahata.jpg"
-            name="SHUBHAM NAHATA"
-            posts={["Operations Team Lead", "Oasis Joint Coordinator"]}
-            li="https://www.linkedin.com/in/shubham-nahata-60059822b/"
-            email="mailto:f20210725@pilani.bits-pilani.ac.in"
-          />
-          <TeamCard
-            stu={true}
-            imgsrc="http://embryo.bits-pilani.ac.in/img/team/sandhu.jpg"
-            name="SAKSHAM SANDHU"
-            posts={["Editorial Team Lead", "BOSM Joint Coordinator"]}
-            li="https://www.linkedin.com/in/saksham-sandhu-256255228/"
-            email="mailto:f20212643@pilani.bits-pilani.ac.in"
-          />
+        <div className="grid w-screen grid-cols-2 md:grid-cols-4 md:gap-4">
+          {teamdata.map((data) => (
+            <TeamCard
+              key={data.name}
+              imgsrc={data.imgsrc}
+              name={data.name}
+              posts={data.posts}
+              linkedin={data.linkedin}
+              email={data.email}
+            />
+          ))}
         </div>
       </section>
 
+      {/* Contact us */}
       <section id="contact" className="md:w-1/2 m-6 md:m-12">
         <h1 className="text-4xl text-center font-serif md:text-6xl">
           CONTACT US
@@ -246,9 +197,9 @@ export default function Home() {
             <div>
               <a
                 className="text-sm md:text-xl"
-                href="mailto:f20210672@pilani.bits-pilani.ac.in"
+                href="mailto:f20220919@pilani.bits-pilani.ac.in"
               >
-                f20210672@pilani.bits-pilani.ac.in
+                f20220919@pilani.bits-pilani.ac.in
               </a>
             </div>
           </div>
@@ -257,8 +208,8 @@ export default function Home() {
               <IoIosCall className="text-3xl m-4" />
             </div>
             <div>
-              <a className="text-sm md:text-xl" href="tel:+917738536656">
-                +91 7738536656
+              <a className="text-sm md:text-xl" href="tel:+917696024085">
+                +91 7696024085
               </a>
             </div>
           </div>

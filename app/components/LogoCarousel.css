@@ -1,0 +1,36 @@
+.logo {
+  max-width: 300px;
+  height: 10rem;
+  object-fit: contain;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.banner__wrapper {
+  width: 100vw;
+  height: 12rem;
+  overflow-x: hidden;
+}
+
+.banner__wrapper .wrapper {
+  display: flex;
+}
+
+.banner__wrapper .wrapper .images {
+  display: flex;
+  /* animation: swipe var(--speed) linear infinite; */
+}
+
+.banner__wrapper:hover .wrapper .images {
+  animation-play-state: paused;
+}
+
+@keyframes swipe {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

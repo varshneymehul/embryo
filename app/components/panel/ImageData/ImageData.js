@@ -1,7 +1,7 @@
 import gre from "./gre24.png";
 import cat from "./catchamps24.jpg";
 import pf from "./PF.jpg";
-const UnsplashImages = [
+const PanelData = [
   {
     src: gre,
     title: "Gateway to GRE 2024",
@@ -22,4 +22,4 @@ const UnsplashImages = [
   },
 ];
 
-export default UnsplashImages;
+export default PanelData;

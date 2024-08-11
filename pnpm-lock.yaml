@@ -26,9 +26,6 @@ dependencies:
   react-intersection-observer:
     specifier: ^9.8.2
     version: 9.13.0(react-dom@18.3.1)(react@18.3.1)
-  react-pageflip:
-    specifier: ^2.0.3
-    version: 2.0.3
   react-scroll-parallax:
     specifier: ^3.4.5
     version: 3.4.5(react-dom@18.3.1)(react@18.3.1)
@@ -2975,10 +2972,6 @@ packages:
     resolution: {integrity: sha512-dATvCeZN/8wQsGywez1mzHtTlP22H8OEfPrVMLNr4/eGa+ijtLn/6M5f0dY8UKNrC2O9UCU6SSoG3qRKnt7STw==}
     dev: true
 
-  /page-flip@2.0.7:
-    resolution: {integrity: sha512-96lQFUUz7r/LZzEUZJ3yBIMEKU9+m8HMFDzTvTdD6P7Ag/wXINjp9n0W7b4wanwnDbQETo4uNUoL3zMqpFxwGA==}
-    dev: false
-
   /parallax-controller@1.7.1:
     resolution: {integrity: sha512-facVMEBnUynzMN7hCSqyNpF6uyCpVIl4XAUyTR9D8q2JlhgyPY6bZtj/OkFk3+Cpka1TnYCppQb8BzDWHtSaZg==}
     engines: {node: '>=12'}
@@ -3202,12 +3195,6 @@ packages:
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
-
-  /react-pageflip@2.0.3:
-    resolution: {integrity: sha512-k81mHhRvUM52y8jyzTCh5t4O0lepkLhp+XGSUzq2C3uD+iW99Cv0jfRlqFCjZbD5N3jKkIFr7/3giucoXKDP3Q==}
-    dependencies:
-      page-flip: 2.0.7
-    dev: false
 
   /react-scroll-parallax@3.4.5(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-4NLZQ8cZEUyxoA95DfrXWneOOUSFrFmpM0dZNzMErmuJ0LzY+CCw8Xw0hqB6xxHWxNknfs46AozyIPSWkZeucA==}

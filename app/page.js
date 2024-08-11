@@ -159,7 +159,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="grid w-screen grid-cols-2 md:grid-cols-4 md:gap-4">
+        <div className="md:grid px-4 md:px-8 w-screen md:grid-cols-4 md:gap-4">
           {teamdata.map((data) => (
             <TeamCard
               key={data.name}

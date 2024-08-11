@@ -2,12 +2,12 @@ import LectureCard from "./components/LectureCard";
 import lecturesData from "./lecture-data";
 export default function Lectures() {
   return (
-    <main className="flex flex-col px-16 items-center justify-between dark:text-white">
+    <main className="flex flex-col px-4 md:px-16 items-center justify-between dark:text-white">
       <div className="backdrop-lectures"></div>
       <h1 className="text-4xl md:text-7xl p-12 text-center font-serif z-40">
         LECTURES
       </h1>
-      <p className="text-md md:text-lg w-5/6 z-40">
+      <p className="text-md py-4 text-justify md:text-lg w-5/6 z-40">
         BITS Embryo offers a wide range of talks covering diverse topics
         presented by experts in their respective fields. These talks encompass
         various aspects of technology, business, entrepreneurship, public

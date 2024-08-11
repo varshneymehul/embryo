@@ -1,5 +1,5 @@
 import React from "react";
-
+import PanelData from "../components/panel/ImageData/ImageData";
 const Panels = () => {
   return (
     <main className="flex flex-col px-16 items-center justify-between dark:text-white">

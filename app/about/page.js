@@ -1,11 +1,11 @@
 import AboutUsCard from "./components/AboutUsCard";
 const About = () => {
   return (
-    <main className="mx-12 md:mx-16 items-center justify-between dark:text-white">
+    <main className="mx-12 pb-4 md:mx-16 items-center justify-between dark:text-white">
       <h1 className="text-4xl md:text-7xl p-12 text-center font-serif">
         ABOUT
       </h1>
-      <p className="dark:text-white  my-4 text-xs md:text-lg  ">
+      <p className="dark:text-white  my-4 text-xs md:text-lg text-justify">
         Embryo is a forum for on-line, live and interactive lectures, run by
         students and faculties of BITS-Pilani. It was conceived and initiated by
         a group of 6 BITS Pilani Alumni in the Silicon Valley in 2006 with an

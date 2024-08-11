@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import bgGradient from "../../public/img/bg-gradient.png";
+import bgGradient from "../../public/img/bg-gradient.jpg";
 import Image from "next/image";
 const Sidebar = ({ toggle, handleClick }) => {
   return (
@@ -19,7 +19,7 @@ const Sidebar = ({ toggle, handleClick }) => {
       <div className="p-4 md:pl-8 absolute">
         <div className="hidden md:block"></div>
         <div className="z-20 pt-12">
-          <ul className="list-none text-4xl md:text-7xl">
+          <ul className="list-none text-2xl md:text-7xl">
             <li
               onClick={handleClick}
               className={`${

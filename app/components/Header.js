@@ -39,7 +39,9 @@ function Header(props) {
         <Link href={"/"}>
           <Image
             style={{ opacity: offset / 600 }}
-            className={`logo ${props.page === 0 ? "out" : ""}`}
+            className={`logo ${props.page === 0 ? "out" : ""} w-20 md:w-24`}
+            width={200}
+            
             src={logo}
             alt="logo"
           />

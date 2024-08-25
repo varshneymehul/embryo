@@ -13,7 +13,7 @@ const LectureCard = ({
     <div className="flex flex-col md:flex-row items-center w-full rounded-lg p-6 md:p-0 bg-white bg-opacity-20 backdrop-blur-lg shadow-3xl shadow-zinc-100">
       <div className="end-0">
         <Image
-          className="object-cover w-full aspect-square p-2 h-48 md:h-auto md:w-48  rounded-full"
+          className="object-cover w-full aspect-square p-2 h-60 md:h-auto md:w-48 rounded-full"
           src={imgSrc}
           alt="lecturer-image"
           height={3000}

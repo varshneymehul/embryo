@@ -9,15 +9,21 @@ function Header(props) {
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => setOffset(window.scrollY);
-    if (offset > 600) {
-      setOffset(600);
-    }
-    // clean up code
-    window.removeEventListener("scroll", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [offset]);
+    const handleScroll = () => {
+      const newOffset = window.scrollY;
+      if (newOffset > 600) {
+        setOffset(600);
+      } else {
+        setOffset(newOffset);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const [toggle, setToggle] = useState(false);
   const handleToggle = (checked) => {
@@ -41,7 +47,6 @@ function Header(props) {
             style={{ opacity: offset / 600 }}
             className={`logo ${props.page === 0 ? "out" : ""} w-20 md:w-24`}
             width={200}
-            
             src={logo}
             alt="logo"
           />

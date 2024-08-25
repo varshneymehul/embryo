@@ -2,8 +2,7 @@ import LectureCard from "./components/LectureCard";
 import lecturesData from "./lecture-data";
 export default function Lectures() {
   return (
-    <main className="flex flex-col px-4 md:px-16 items-center justify-between dark:text-white">
-      <div className="backdrop-lectures"></div>
+    <main className="flex flex-col px-4 md:px-16 items-center justify-between dark:text-white lecturesBg">
       <h1 className="text-4xl md:text-7xl p-12 text-center font-serif z-40">
         LECTURES
       </h1>

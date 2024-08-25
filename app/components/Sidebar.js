@@ -19,7 +19,7 @@ const Sidebar = ({ toggle, handleClick }) => {
       <div className="p-4 md:pl-8 absolute">
         <div className="hidden md:block"></div>
         <div className="z-20 pt-12">
-          <ul className="list-none text-2xl md:text-7xl">
+          <ul className="list-none text-2xl md:text-5xl">
             <li
               onClick={handleClick}
               className={`${
@@ -58,7 +58,7 @@ const Sidebar = ({ toggle, handleClick }) => {
                 toggle ? "opacity-100" : "opacity-0"
               }  hover:text-transparent hover:bg-clip-text hover:from-blue-200 hover:to-fuchsia-300 hover:background-animate hover:bg-gradient-to-br text-white py-2 delay-500 transition-opacity`}
             >
-              <Link href={"/about"}>About</Link>
+              <Link href={"/#about-us"}>About</Link>
             </li>
           </ul>
         </div>

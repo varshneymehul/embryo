@@ -10,7 +10,7 @@ export function ImageSection({ images, speed }) {
       {images.map(({ logoSrc, name }) => (
         <div key={name} className={"image"}>
           <Image
-            className={"logo"}
+            className={"logoPartners"}
             width={200}
             height={200}
             src={logoSrc}

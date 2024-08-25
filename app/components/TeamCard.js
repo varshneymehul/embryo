@@ -29,7 +29,7 @@ function TeamCard({ imgsrc, posts, name, linkedin, email }) {
             <a href={linkedin} target="_blank" rel="noreferrer">
               <FaLinkedin className="text-3xl m-4 transition-all hover:text-blue-600" />
             </a>
-            <a href="mailto:f20220919@pilani.bits-pilani.ac.in">
+            <a href={email}>
               <FaMailBulk className="text-3xl m-4 hover:text-red-600 transition-all" />
             </a>
           </div>

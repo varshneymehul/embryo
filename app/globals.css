@@ -49,8 +49,7 @@ body {
   background-size: cover;
   background: radial-gradient(
     circle,
-    /* rgba(23, 22, 31, 1) 0%, */
-    rgb(15, 15, 16) rgb(18, 19, 20) 100%
+    /* rgba(23, 22, 31, 1) 0%, */ rgb(15, 15, 16) rgb(18, 19, 20) 100%
   );
   /* overflow-x: hidden; */
   --sb-track-color: #17161f;
@@ -72,7 +71,7 @@ body {
 }
 .backdrop-2 {
   /* From https://css.glass */
-  background: rgba(66, 63, 63, 0.25);
+  background: #17161f;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 16px;
   width: 90vw;
@@ -99,5 +98,5 @@ body {
   }
 }
 .gradient {
-  background: linear-gradient(rgba(14, 62, 151, 0.5) 50%, black);
+  background: linear-gradient(rgba(14, 62, 151, 0.5) 50%, #17161f);
 }

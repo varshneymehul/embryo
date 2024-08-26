@@ -16,7 +16,7 @@ const PanelCard = ({ src, title, description, link, speakers, date }) => {
           height={400}
         />
       </div>
-      <div className="py-6 md:w-2/3">
+      <div className="py-6 px-4 md:w-2/3">
         <p className="text-xl font-bold md:text-3xl font-sans_heading">
           {title}
         </p>
@@ -27,7 +27,7 @@ const PanelCard = ({ src, title, description, link, speakers, date }) => {
           {speakers.map((speaker) => (
             <div
               key={speaker.name}
-              className="text-sm md:text-lg bg-slate-700 text-center rounded-lg p-4 m-2 overflow-x-auto"
+              className="text-sm md:text-lg bg-slate-700 text-center rounded-lg p-4 m-2 w-1/4"
             >
               <Image
                 src={speaker.imgSrc}

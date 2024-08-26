@@ -1,7 +1,47 @@
 import gre from "./gre24.png";
 import cat from "./catchamps24.jpg";
-import pf from "./PF.jpg";
+import pf from "./perspectivesunfolded2.png";
+import p2r from "./research2passport.jpg";
 const PanelData = [
+  {
+    src: p2r,
+    title: "Passport to Research 2024",
+    date: "24th March, 2024",
+    description: "",
+    link: "",
+    speakers: [
+      {
+        name: "Ameya Deshmukh",
+        imgSrc: "/img/panel/gre24/ameya_deshmukh.jpg",
+        linkedin: "https://www.linkedin.com/in/ameya-deshmukh-309569160/",
+        description: "Marks: 329",
+      },
+      {
+        name: "Shaz Furniturwala",
+        imgSrc: "/img/panel/gre24/shaz_furniturwala.jpg",
+        linkedin: "https://www.linkedin.com/in/shaz-furniturwala-7a012a1b0/",
+        description: "Marks: 340",
+      },
+      {
+        name: "Adhityan Sridharan",
+        imgSrc: "/img/panel/gre24/adhityan_sridharan.jpg",
+        linkedin: "https://www.linkedin.com/in/aditi-agarwal-3b9b8b1b7/",
+        description: "Marks: 323",
+      },
+      {
+        name: "Kartik Aggarwal",
+        imgSrc: "/img/panel/gre24/kartik_aggarwal.jpg",
+        linkedin: "https://www.linkedin.com/in/kartik-aggarwal-3b9b8b1b7/",
+        description: "Marks: 326",
+      },
+      // {
+      //   name: "Kartik Aggarwal",
+      //   imgSrc: "/img/panel/gre24/kartik_aggarwal.jpg",
+      //   linkedin: "https://www.linkedin.com/in/kartik-aggarwal-3b9b8b1b7/",
+      //   description: "Marks: 326",
+      // },
+    ],
+  },
   {
     src: gre,
     title: "Gateway to GRE 2024",
@@ -67,23 +107,41 @@ const PanelData = [
         imgSrc: "/img/panel/catchamps24/arun_kumar.jpg",
         linkedin: "",
         description: "99.53%ile",
-      }
+      },
     ],
   },
   {
     src: pf,
     title: "Perspectives Unfolded",
     description:
-      "Panel discussion with leading experts, startup founders and experienced professionals giving insights and strategies to make it big in the industry",
+      "Perspective Unfolded proved to be an enriching experience, offering students direct access to the minds shaping the SpaceTech industry. The session not only deepened understanding but also ignited a sense of curiosity and ambition among attendees, encouraging them to pursue new frontiers in SpaceTech.",
     date: "24th March, 2024",
 
     link: "",
     speakers: [
       {
-        name: "Aditi Agarwal",
-        imgSrc: "",
+        name: "Wing Cdr Satyam Kushwaha",
+        imgSrc: "/img/panel/pf24/satyam_kushwaha.jpg",
         linkedin: "",
-        description: "",
+        description: "Director, Indian Space Association (ISpA)",
+      },
+      {
+        name: "Raghav Sharma",
+        imgSrc: "/img/panel/pf24/raghav_sharma.jpg",
+        linkedin: "https://www.linkedin.com/in/raghav-sharma-7b8b6b1b4/",
+        description: "Founder, Xovian Aerospace",
+      },
+      {
+        name: "Akash Yalagach",
+        imgSrc: "/img/panel/pf24/akash_yalagach.jpg",
+        linkedin: "",
+        description: "Co-Founder and CTO, kaleidEO (Satsure)",
+      },
+      {
+        name: "Aakash Sinha",
+        imgSrc: "/img/panel/pf24/aakash_sinha.jpg",
+        linkedin: "",
+        description: "CEO and Founder, Omnipresent Robot Technologies",
       },
     ],
   },

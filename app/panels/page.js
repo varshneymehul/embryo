@@ -3,7 +3,7 @@ import PanelData from "../components/panel/ImageData/ImageData";
 import PanelCard from "./components/PanelCard";
 const Panels = () => {
   return (
-    <main className="flex flex-col px-16 justify-between">
+    <main className="flex flex-col px-4 md:px-16 justify-between">
       <h1 className="text-4xl md:text-7xl p-12 text-center font-serif z-40">
         PANEL DISCUSSION
       </h1>

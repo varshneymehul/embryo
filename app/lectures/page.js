@@ -18,7 +18,7 @@ export default function Lectures() {
         fostering a holistic understanding of contemporary issues and
         developments.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12  md:m-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-12  md:m-12">
         {lecturesData.map((lecture) => (
           <LectureCard key={lecture.name} {...lecture} />
         ))}

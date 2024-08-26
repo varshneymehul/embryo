@@ -14,7 +14,7 @@ const lecturesData = [
     title: "Harnessing GenAI & ML: Turning Data into Solutions",
     name: "Anupam Purwar",
     description:
-      "Anupam is a BITS alumnus with an MBA from ISB. He is a senior research scientist at Amazon Development Center (India). With an expertise in ML, IoT and computationaol design, he has more than 20 peer reviewed articles with over 200 citations. For more information, visit <a href='https://anupam-purwar.github.io/page/' target='_blank'>Anupam's Profile</a>",
+      "Anupam is a BITS alumnus with an MBA from ISB. He is a senior research scientist at Amazon Development Center (India). With an expertise in ML, IoT and computationaol design, he has more than 20 peer reviewed articles with over 200 citations. ",
     recordingUrl: "",
     imgSrc: "/img/lec/anupam_purwar.jpg",
     date: "26 November, 2023",

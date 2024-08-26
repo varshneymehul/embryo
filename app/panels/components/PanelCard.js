@@ -5,7 +5,7 @@ import classes from "./PanelCard.module.css";
 const PanelCard = ({ src, title, description, link, speakers, date }) => {
   return (
     <div
-      className={`${classes.card} flex flex-col md:flex-row md:w-full items-center justify-stretch m-4 p-4 rounded-lg`}
+      className={`${classes.card} flex flex-col md:flex-row md:w-full items-center justify-stretch md:m-4 p-4 rounded-lg`}
     >
       <div className="md:w-1/3">
         <Image
@@ -23,11 +23,11 @@ const PanelCard = ({ src, title, description, link, speakers, date }) => {
         <p className="text-sm md:text-lg py-4">{description}</p>
         <p className="text-sm md:text-lg py-2">{date}</p>
         Speakers:{" "}
-        <div className="text-sm md:text-lg flex">
+        <div className="text-sm md:text-lg grid grid-cols-2 sm:grid-cols-4">
           {speakers.map((speaker) => (
             <div
               key={speaker.name}
-              className="text-sm md:text-lg bg-slate-700 text-center rounded-lg p-4 m-2 w-1/4"
+              className="text-sm md:text-lg bg-slate-700 text-center rounded-lg p-4 m-2"
             >
               <Image
                 src={speaker.imgSrc}

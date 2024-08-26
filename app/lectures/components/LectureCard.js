@@ -10,7 +10,7 @@ const LectureCard = ({
   recordingUrl,
 }) => {
   return (
-    <div className="flex flex-col md:flex-row items-center w-full rounded-lg p-6 md:p-0 bg-white bg-opacity-20 backdrop-blur-lg shadow-3xl shadow-zinc-100">
+    <div className="flex flex-col md:flex-row items-center w-full rounded-lg p-6 md:p-0 bg-zinc-800 backdrop-blur-lg shadow-3xl shadow-zinc-100">
       <div className="end-0">
         <Image
           className="object-cover w-full aspect-square p-2 h-60 md:h-auto md:w-48 rounded-full"
@@ -26,7 +26,7 @@ const LectureCard = ({
         <p className="text-md">{description}</p>
         <p className="text-sm text-gray-400">{date}</p>
         <a
-          className="text-blue-500 hover:text-blue-200 transition-all"
+          className="text-green-200 hover:text-blue-200 transition-all"
           href={linkedin}
           target="_blank"
           rel="noreferrer"

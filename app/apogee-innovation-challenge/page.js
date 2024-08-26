@@ -3,9 +3,9 @@ import partnerData from "./partner-data";
 import Image from "next/image";
 const ApogeeInnovationChallenge = () => {
   return (
-    <main className="flex flex-col px-12 items-center justify-between dark:text-white">
-      <h1 className="text-4xl md:text-7xl p-12 text-center uppercase font-serif z-40">
-        Apogee Innovation Challenge
+    <main className="flex flex-col py-4 px-8 md:px-12 items-center justify-between dark:text-white">
+      <h1 className="text-4xl md:text-7xl md:p-12 text-center uppercase font-serif z-40">
+        APOGEE Innovation Challenge
       </h1>
 
       <section className="md:px-28">
@@ -19,11 +19,18 @@ const ApogeeInnovationChallenge = () => {
           Students form teams of 1-3 members, develop solutions to these
           industry challenges, and submit them for evaluation by company judges.
           <br />
-          The best solutions are rewarded with cash prizes, internships, or
-          other goodies. Over the years, AIC has attracted participation from
-          leading companies across various sectors, providing students with
-          exposure to real-world industry challenges and expectations.
         </p>
+        <ul className="list-disc">
+          <li>
+            The best solutions are rewarded with cash prizes, internships, or
+            other goodies.
+          </li>
+          <li>
+            Over the years, AIC has attracted participation from leading
+            companies across various sectors, providing students with exposure
+            to real-world industry challenges and expectations.
+          </li>
+        </ul>
 
         <h1 className="text-2xl md:text-4xl font-sans_heading py-4">
           Why should you participate?
@@ -31,16 +38,23 @@ const ApogeeInnovationChallenge = () => {
         <p className="text-md py-4 text-justify md:text-lg w-5/6 z-40">
           AIC benefits companies by offering them innovative solutions from some
           of the brightest young minds in the country and providing valuable
-          publicity as event partners. For students, participating in AIC offers
-          hands-on experience, career preparation, and valuable networking
-          opportunities.
-          <br />
-          It also opens doors to potential internships with leading companies,
-          enhancing their resumes and job readiness. The challenge not only
-          rewards students with cash prizes but also helps them build confidence
-          and develop critical problem-solving skills, making it a
-          transformative experience.
+          publicity as event partners.
         </p>
+        <ul className="list-disc">
+          <li>
+            For students, participating in AIC offers hands-on experience,
+            career preparation, and valuable networking opportunities.
+          </li>
+          <li>
+            It also opens doors to potential internships with leading companies,
+            enhancing their resumes and job readiness.
+          </li>
+          <li>
+            The challenge not only rewards students with cash prizes but also
+            helps them build confidence and develop critical problem-solving
+            skills, making it a transformative experience.
+          </li>
+        </ul>
         <h1 className="text-2xl md:text-4xl font-sans_heading py-4">
           Our Partners
         </h1>
@@ -63,7 +77,6 @@ const ApogeeInnovationChallenge = () => {
         ))}
         <p className="text-right mt-auto mr-auto">and many more...</p>
       </section>
-      
     </main>
   );
 };

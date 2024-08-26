@@ -153,7 +153,7 @@ export default function Home() {
           <TeamCard
             imgsrc="http://embryo.bits-pilani.ac.in/img/team/prof.jpeg"
             name="DR. RISHIKESH VAIDYA"
-            posts={["Teacher-In-Charge"]}
+            posts={["Faculty-in-Charge"]}
             linkedin="https://www.linkedin.com/in/rishikesh-vaidya-8a61344a/"
             email="mailto:rishikesh@pilani.bits-pilani.ac.in"
           />

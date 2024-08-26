@@ -2,7 +2,8 @@ import React from "react";
 
 import "./TeamCard.css";
 import Image from "next/image";
-import { FaLinkedin, FaMailBulk } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 function TeamCard({ imgsrc, posts, name, linkedin, email }) {
   return (
     <div className="bg-slate-800 shadow-sm shadow-zinc-200 mx-4 my-2 md:m-6 rounded-md">
@@ -30,7 +31,7 @@ function TeamCard({ imgsrc, posts, name, linkedin, email }) {
               <FaLinkedin className="text-3xl m-4 transition-all hover:text-blue-600" />
             </a>
             <a href={email}>
-              <FaMailBulk className="text-3xl m-4 hover:text-red-600 transition-all" />
+              <IoMdMail className="text-3xl m-4 hover:text-red-600 transition-all" />
             </a>
           </div>
         </div>

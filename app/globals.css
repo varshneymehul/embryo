@@ -72,7 +72,7 @@ body {
 .backdrop-2 {
   /* From https://css.glass */
   background: #17161f;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+
   border-radius: 16px;
   width: 90vw;
   padding: 5vw;

@@ -43,7 +43,13 @@ const PanelCard = ({ src, title, description, link, speakers, date }) => {
             </div>
           ))}
         </div>
-        <p className="text-sm md:text-lg">Link: {link}</p>
+        {link && (
+          <p className="text-sm md:text-lg text-blue-400 hover:text-white transition-all">
+            <Link href={link} alt={link}>
+              Watch here
+            </Link>
+          </p>
+        )}
       </div>
     </div>
   );

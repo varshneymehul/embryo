@@ -27,7 +27,7 @@ const Sidebar = ({ toggle, handleClick }) => {
   ];
   return (
     <div
-      className={`h-screen top-0 opacity-90 backdrop-blur-xl delay-75 transform transition-all duration-300 ease-in-out fixed w-screen ${
+      className={`h-screen top-0 opacity-100 backdrop-blur-3xl delay-75 transform transition-all duration-300 ease-in-out fixed w-screen ${
         toggle ? "translate-x-2/3 md:translate-x-3/4" : "translate-x-full"
       }`}
     >
@@ -48,7 +48,7 @@ const Sidebar = ({ toggle, handleClick }) => {
                 onClick={handleClick}
                 className={`${
                   toggle ? "opacity-100" : "opacity-0"
-                }  hover:text-transparent hover:bg-clip-text hover:from-blue-200 hover:to-fuchsia-300 hover:background-animate hover:bg-gradient-to-br text-white [text-shadow:_3px_3px_2px_rgb(0_0_0_/_40%)] py-2 delay-500 transition-opacity`}
+                }  hover:text-transparent hover:bg-clip-text hover:from-blue-200 hover:to-fuchsia-300 hover:background-animate hover:bg-gradient-to-br lowercase font-serif text-white py-2 delay-500 transition-opacity`}
               >
                 <Link href={link.link}>{link.name}</Link>
               </li>

@@ -1,14 +1,16 @@
-import gre from "./gre24.png";
-import cat from "./catchamps24.jpg";
+import gre24 from "./gre24.png";
+import cat24 from "./catchamps24.jpg";
 import pf from "./perspectivesunfolded2.png";
 import p2r from "./research2passport.jpg";
 const PanelData = [
+  
   {
     src: p2r,
     title: "Passport to Research 2024",
     date: "24th March, 2024",
-    description: "",
-    link: "",
+    description:
+      "Passport to Research by BITS Embryo was an insightful panel discussion focused on helping students secure international research internships. Esteemed speakers shared tips on crafting strong applications, acing interviews, and writing effective SOPs. ",
+    link: "https://www.youtube.com/watch?v=YmuYqgbc-R0",
     speakers: [
       {
         name: "Ameya Deshmukh",
@@ -43,12 +45,12 @@ const PanelData = [
     ],
   },
   {
-    src: gre,
+    src: gre24,
     title: "Gateway to GRE 2024",
     date: "24th March, 2024",
     description:
       "Gateway to GRE is an insightful panel discussion hosted by BITS Embryo, featuring accomplished BITSians who have excelled in the GRE. The event aims to provide aspiring graduate students with valuable tips, strategies, and resources to help them succeed in their GRE journey and beyond.",
-    link: "",
+    link: "https://youtu.be/Evr0TS34WPQ?si=uRG4Sd6Ufc_NqpeL",
     speakers: [
       {
         name: "Ameya Deshmukh",
@@ -83,7 +85,7 @@ const PanelData = [
     ],
   },
   {
-    src: cat,
+    src: cat24,
     title: "CATChamps 2024",
     date: "24th March, 2024",
     description:

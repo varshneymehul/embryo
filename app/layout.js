@@ -1,6 +1,6 @@
 import "./globals.css";
 import Header from "./components/Header";
-
+import CursorGlow from "./components/CursorGlow";
 import { GeistSans } from "geist/font/sans";
 
 export const metadata = {
@@ -13,7 +13,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={GeistSans.className}>
       <body>
-        <div className="main-container">
+        <CursorGlow color="lightblue" />
+        <div>
           <Header />
           {children}
         </div>

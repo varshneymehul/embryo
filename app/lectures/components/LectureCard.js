@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const LectureCard = ({
   title,
@@ -10,10 +11,10 @@ const LectureCard = ({
   recordingUrl,
 }) => {
   return (
-    <div className="flex flex-col md:flex-row items-center w-full rounded-lg p-6 md:p-0 bg-zinc-800 backdrop-blur-lg shadow-3xl shadow-zinc-100">
+    <div className="flex flex-col md:flex-row items-center w-full rounded-lg p-6 md:p-0 bg-zinc-800 backdrop-blur-lg shadow-3xl shadow-zinc-100 hover:ring-2 hover:ring-stone-100 transition-all">
       <div className="end-0">
         <Image
-          className="object-cover w-full aspect-square p-2 h-60 md:h-auto md:w-48 rounded-full"
+          className="object-cover w-full aspect-square p-2 m-2 h-60 md:h-auto md:w-48 rounded-full"
           src={imgSrc}
           alt="lecturer-image"
           height={3000}
@@ -33,6 +34,11 @@ const LectureCard = ({
         >
           {name} on LinkedIn
         </a>
+        {recordingUrl && (
+          <p className="text-blue-500 hover:text-white transition-all">
+            <Link href={recordingUrl}></Link>
+          </p>
+        )}
       </div>
     </div>
   );

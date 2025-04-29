@@ -60,7 +60,7 @@ function Header(props) {
           <span className="line"></span>
         </label>
       </div>
-      <Sidebar toggle={toggle} handleClick={handleToggle} />
+      {/* <Sidebar toggle={toggle} handleClick={handleToggle} /> */}
     </header>
   );
 }

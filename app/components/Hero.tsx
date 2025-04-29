@@ -1,4 +1,5 @@
 import React from "react";
+import fore from "../../public/img/foreground.png";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
 
@@ -18,18 +19,19 @@ export const AdvancedBannerTop = () => {
     shouldAlwaysCompleteAnimation: true,
     expanded: false,
     children: (
-      <div className="inset text-center mt-24">
-        <h2 className="font-light white text-3xl md:text-5xl">welcome to</h2>
-        <h1 className="font-bold text-4xl md:text-8xl">BITS EMBRYO</h1>
+      <div className="inset text-center mt-16">
+        <h2 className="font-light white text-xl md:text-3xl">welcome to</h2>
+        <h1 className="font-bold text-4xl md:text-8xl font-serif bg-gradient-to-r from-white to-yellow-100 text-shadow-sm inline-block text-transparent bg-clip-text">
+          BITS EMBRYO
+        </h1>
       </div>
     ),
   };
 
   const foreground: BannerLayer = {
-    image:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/banner-foreground.png",
+    image: fore.src,
     translateY: [0, 15],
-    scale: [1, 1.1, "easeOutCubic"],
+    scale: [1, 1.2, "easeOutCubic"],
     shouldAlwaysCompleteAnimation: true,
   };
 

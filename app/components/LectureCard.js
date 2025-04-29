@@ -1,28 +1,36 @@
 import { FaLinkedin } from "react-icons/fa";
-import "./LectureCard.css";
 import Image from "next/image";
 
 const LectureCard = ({ title, img, linkedin, description, name }) => {
   return (
-    <div className="md:w-1/4 group rounded-lg p-4 m-2 bg-slate-800 backdrop-blur-lg shadow-3xl shadow-zinc-100 transition-all">
-      {/* hidden at first */}
-
-      <div className="group-hover:flex group-hover:items-center group-hover:p-2">
+    <div className="group relative rounded-lg p-4 m-2 bg-slate-800 backdrop-blur-lg shadow-3xl shadow-zinc-100 transform transition-all duration-500 ease-in-out hover:scale-105 hover:z-10">
+      {/* Card image and title */}
+      <div className="flex flex-col items-center transition-all duration-500 ease-in-out">
         <Image
-          className="object-cover aspect-square rounded-lg mx-auto md:h-[20vw] group-hover:w-2/4 group-hover:h-auto group-hover:mx-0 group-hover:rounded-full duration-300 transition-all"
+          className="object-cover aspect-square rounded-lg w-full h-auto max-h-64 transition-all duration-500 ease-in-out"
           src={img}
           alt="lecturer-image"
           width={300}
           height={300}
         />
-        <h1 className="font-sans group-hover:text-base group-hover:p-2 text-2xl py-4 font-sans_heading text-center">
+        <h1 className="font-sans text-2xl py-4 font-sans_heading text-center">
           {title}
         </h1>
       </div>
-      <div className="hidden p-3 h-full w-full group-hover:block">
-        <div className="flex justify-between">
-          <h2 className="font-serif text-xl uppercase">{name}</h2>
-          <p className="text-sm text-gray-400">
+      {/* Popout details card */}
+      <div className="absolute top-0 left-0 z-50 w-full h-full scale-0 group-hover:scale-105 group-hover:opacity-100 opacity-0 transform transition-all duration-500 ease-in-out bg-slate-900 text-white rounded-lg">
+        <div className="relative w-full h-1/2 mb-2">
+          <Image
+            src={img}
+            alt="lecturer-image"
+            fill
+            className="object-cover rounded-lg"
+          />
+          <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-slate-900 to-transparent rounded-b-lg" />
+        </div>
+        <div className="p-4">
+          <div className="flex justify-between items-center mb-2 p-2">
+            <h2 className="font-serif text-xl uppercase">{name}</h2>
             <a
               className="text-blue-500 text-2xl hover:text-blue-200 transition-all"
               href={linkedin}
@@ -31,9 +39,9 @@ const LectureCard = ({ title, img, linkedin, description, name }) => {
             >
               <FaLinkedin />
             </a>
-          </p>
+          </div>
+          <p className="text-sm">{description}</p>
         </div>
-        <p className="text-md">{description}</p>
       </div>
     </div>
   );

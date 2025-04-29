@@ -7,30 +7,12 @@
   src: url("../public/font/Analogue85Black.otf") format("opentype");
 }
 
+/* add variable for serif for analogue */
+
 @font-face {
   font-family: "Larken";
   src: url("../public/font/LarkenDEMO-Light.otf") format("opentype");
 }
-/* 
-body::-webkit-scrollbar {
-  width: var(--sb-size);
-}
-
-body::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-  border-radius: 25px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: 25px;
-}
-
-@supports not selector(::-webkit-scrollbar) {
-  body {
-    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-  }
-} */
 
 @layer utilities {
   .paused {
@@ -43,7 +25,6 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
-  max-width: 100%;
   color: white;
   background: rgb(23, 22, 31);
   background-size: cover;
@@ -57,7 +38,7 @@ body {
   --sb-size: 12px;
 }
 ::selection {
-  background: #000000b3;
+  background: #7a000000;
   text-shadow: #fc0 1px 0 10px;
 }
 .headline {
@@ -72,30 +53,11 @@ body {
 .backdrop-2 {
   /* From https://css.glass */
   background: #17161f;
-
   border-radius: 16px;
-  width: 90vw;
   padding: 5vw;
 }
-/* .backdrop-lectures {
-  background-image: url("../public/lectures-bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: blur(3px);
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  -webkit-filter: blur(3px);
-} */
-
 .full {
   height: 100vh;
-}
-@media (max-width: 1024px) {
-  .full {
-    height: 100vh;
-  }
 }
 .gradient {
   background: linear-gradient(rgba(14, 62, 151, 0.5) 50%, #17161f);

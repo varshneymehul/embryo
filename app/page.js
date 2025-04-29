@@ -7,27 +7,32 @@ import AicCard from "./components/AicCard";
 import LectureCard from "./components/LectureCard";
 import Button from "./components/Button";
 
+import VaidyaSir from "../public/img/team/vaidya_sir.jpeg";
+
 import PanelCard from "./components/panel/PanelCard";
 import PanelData from "./components/panel/ImageData/ImageData";
 
 import LogoCarousel from "./components/LogoCarousel";
+
 import partners from "./apogee-innovation-challenge/partner-data";
 import teamdata from "../public/data/team-data";
+
 import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import lecturesData from "./lectures/lecture-data";
 import { IoIosCall, IoMdMail } from "react-icons/io";
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between dark:text-white">
+    <main className="flex flex-col items-center justify-between overflow-hidden dark:text-white">
       <ParallaxProvider>
         <AdvancedBannerTop />
       </ParallaxProvider>
 
-      {/* SORT */}
+      {/* about us */}
       <section id="about-us" className="backdrop-2 m-16">
         <h1 className="text-4xl text-center font-serif md:text-6xl">
           ABOUT US
@@ -56,58 +61,39 @@ export default function Home() {
           />
         </div>
 
-        <Button text={"Read More"} link={"/"} />
+        <Button text={"Read More"} link={"/about"} />
       </section>
-
-      {/* SORT */}
+      {/* lectures */}
       <section id="lectures">
         <h1 className="text-4xl text-center font-serif md:text-6xl">
           LECTURES
         </h1>
 
-        <div className="md:flex gap-3 m-6 md:m-12">
-          <LectureCard
-            title="YIN AND YANG OF PRODUCT INNOVATION"
-            img="http://embryo.bits-pilani.ac.in/img/lec/Piyush-Malik.jpg"
-            name="Dr. Piyush Malik"
-            linkedin="https://www.linkedin.com/in/"
-            description="Piyush Malik is a trailblazing startup executive,entrepreneur, board advisor in the domain of emerging technologies. As Chief Data Officer, his expertise lies in leveraging data-driven innovations to craft immersive customer experiences and optimize operations."
-          />
-          <LectureCard
-            title="HARNESSING GENAI & ML"
-            img="http://embryo.bits-pilani.ac.in/img/lec/anupam_purwar.jpg"
-            name="Anupam Purwar"
-            linkedin="https://www.linkedin.com/in/"
-            description="Anupam is a BITS alumnus with an MBA from ISB. He is a senior research scientist at Amazon Development Center (India). With an expertise in ML, IoT and computational design, he has more than 20 peer reviewed articles with over 200 citations. For more information, visit Anupam's Profile"
-          />
-          <LectureCard
-            title="MYTH TO MATH"
-            img="http://embryo.bits-pilani.ac.in/img/lec/AditiDe.jpg"
-            name="DR. ADITI SEN DE"
-            linkedin="https://www.linkedin.com/in/"
-            description="Prof Aditi Sen De is known for her research on quantum information and computation, quantum communication including quantum cryptography, quantum optics and many-body physics. She is the first female physicist to be awarded the Shanti Swarup Bhatnagar Prize for Science and Technology for her contributions to physical sciences in 2018."
-          />
-          <LectureCard
-            title="AMA ON INVESTMENT BANKING"
-            img="http://embryo.bits-pilani.ac.in/img/lec/alokmisra.jpeg"
-            name="ALOK MISRA"
-            linkedin="https://www.linkedin.com/in/"
-            description="Alok Misra is the COO and Operating Partner of General Atlantic, the world's 9th biggest private equity firm. He was Group Chief Financial Officer of MphasiS BFL Group (now part of the Hewlett-Packard Company) and served in a number of accounting and finance roles at other firms, including I.T.C. Limited and PwC. He is a Fellow Member of the Institute of Chartered Accountants of India."
-          />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 m-6 md:m-12">
+          {lecturesData.slice(0, 4).map((lecture, idx) => (
+            <LectureCard
+              key={idx}
+              title={lecture.title}
+              img={lecture.imgSrc}
+              name={lecture.name}
+              linkedin={lecture.linkedin}
+              description={lecture.description}
+            />
+          ))}
         </div>
 
         <Button text={"View All"} link={"/lectures"} />
       </section>
-
+      {/* panels */}
       <section id="panel" className="my-16">
-        <div className="md:flex gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
           {PanelData.map((data) => (
             <PanelCard key={data.title} {...data} />
           ))}
         </div>
         <Button text="View More" link="/panels" />
       </section>
-
+      {/* aic */}
       <section id="aic">
         <h1 className="text-4xl mx-16 mt-24 mb-4 text-center font-serif md:text-6xl">
           APOGEE INNOVATION CHALLENGE
@@ -145,13 +131,13 @@ export default function Home() {
         <LogoCarousel images={partners} speed={20000} />
         <Button text={"Read More"} link={"/apogee-innovation-challenge"} />
       </section>
-
-      <section id="team" className="my-12 mx-4 md:m-16">
+      {/* team */}
+      <section id="team" className="my-12 md:m-16">
         <h1 className="text-4xl text-center font-serif md:text-6xl">TEAM</h1>
 
         <div className="flex justify-center m-4 md:m-12">
           <TeamCard
-            imgsrc="http://embryo.bits-pilani.ac.in/img/team/prof.jpeg"
+            imgsrc={VaidyaSir}
             name="DR. RISHIKESH VAIDYA"
             posts={["Faculty-in-Charge"]}
             linkedin="https://www.linkedin.com/in/rishikesh-vaidya-8a61344a/"
@@ -172,7 +158,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       {/* Contact us */}
       <section id="contact" className="md:w-1/2 m-6 md:m-12">
         <h1 className="text-4xl text-center font-serif md:text-6xl">
@@ -215,6 +200,7 @@ export default function Home() {
           </div>
         </div>
 
+        {/* embryo links */}
         <div className="mx-auto flex text-xl md:text-3xl justify-center gap-5">
           <a
             href="https://www.facebook.com/EmbryoClub/"

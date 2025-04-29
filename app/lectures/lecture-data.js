@@ -1,7 +1,87 @@
 const lecturesData = [
   {
-    title:
-      "Yin and Yang of Product Innovation: Why Data Scientists and Product Managers Need Each Other",
+    title: "Inside Automotive Design",
+    name: "Ramkripa Ananthan",
+    description:
+      "The top GRE scorers share their strategies, preparation techniques, and expert insights to help the students ace the test!",
+    recordingUrl: "",
+    imgSrc: "/img/lec/Ramkripa-Ananthan.jpg",
+    date: "6 April, 2025",
+    linkedin: "https://www.linkedin.com/in/kripa-designexpert/",
+  },
+  {
+    title: "Designing for a connected world: The Product Management journey",
+    name: "Ria Mirchandani",
+    description:
+      "Ms. Ria Mirchandani, a powerhouse Product Manager at SarvamAI and former lead at WhatsApp Payments India, has been at the forefront of scaling products in dynamic markets.",
+    recordingUrl: "",
+    imgSrc: "/img/lec/Ria-Mirchandani.jpg",
+    date: "1 February, 2025",
+    linkedin: "https://www.linkedin.com/in/riamirchandani/",
+  },
+  {
+    title: "The journey of becoming a Civil Servant",
+    name: "Ravi Kapoor",
+    description:
+      "Mr Ravi Kapoor is a resilient person rising from a modest background cracking UPSC multiple time. After a successful career in the IRS, he transitioned to a role focused on mentoring aspiring UPSC candidates.",
+    recordingUrl: "",
+    imgSrc: "/img/lec/Ravi-Kapoor.jpg",
+    date: "10 November, 2024",
+    linkedin: "https://www.linkedin.com/in/ravi-kapoor-001bb1132/",
+  },
+  {
+    title: "Solving wicked problems: Scaling digital India for a billion",
+    name: "Dr. Pramod Varma",
+    description:
+      "Dr. Pramod Verma is the former chief architect of Aadhar, who also played a pivotal role in the India Stack Systems like eSign, DigiLocker, and UPI.",
+    recordingUrl: "",
+    imgSrc: "/img/lec/Pramod-Varma.jpg",
+    date: "24 August, 2024",
+    linkedin: "https://www.linkedin.com/in/pramodkvarma/",
+  },
+  {
+    title: "Biomimicry and Sustainable Design",
+    name: "Seema Anand",
+    description:
+      "Seema Anand is a pioneer in her field, certified by the Biomimicry 3.8 Institute, USA. She is the Co founder of Biomimicry India Network and Biomimicry India Lab and Studio.",
+    recordingUrl: "",
+    imgSrc: "/img/lec/Seema-Anand.jpg",
+    date: "19 October, 2024",
+    linkedin: "https://www.linkedin.com/in/seema-anand-72449a6/",
+  },
+  {
+    title: "Your body: A Data Wire",
+    name: "Dr Shreyas Sen",
+    description:
+      "Dr. Shreyas Sen is an IEEE SSCS Distinguished Lecturer and renowned inventor, on the topic “Your Body: A Data Wire.",
+    recordingUrl: "",
+    imgSrc: "/img/lec/Shreyas-Sen.jpg",
+    date: "27 September, 2024",
+    linkedin: "https://www.linkedin.com/in/shreyassen/",
+  },
+  {
+    title: "Let’s talk money: Smart strategies for financial success",
+    name: "Monika Halan",
+    description:
+      "Monika Halan is the author of the best-selling book “Let’s Talk Money”, the Chairperson of SEBI’s Advisory Committee for IPEF and hosting TV series on NDTV, Zee, and Bloomberg India.",
+    recordingUrl: "",
+    imgSrc: "/img/lec/Monika-Halan.jpg",
+    date: "18 September, 2024",
+    linkedin: "https://www.linkedin.com/in/monikahalan/",
+  },
+
+  {
+    title: "Cybersecurity in the age of AI: Protecting yourself online",
+    name: "Abhishek Mathur",
+    description:
+      "Abhishek Mathur is an award winning ICT leader with expertise in cybersecurity and cloud adaptation. Currently, he is also collaborating with CII-AICTE to develop course content for colleges.",
+    recordingUrl: "",
+    imgSrc: "/img/lec/Abhishek-Mathur.jpg",
+    date: "13 April, 2024",
+    linkedin: "https://www.linkedin.com/in/amathur2404/",
+  },
+  {
+    title: "Yin and Yang of Product Innovation",
     name: "Piyush Malik",
     description:
       "Piysh Malik is a trailblazing startup executive, entrepreneur, board advisor in the domain of emerging technologies. As Chief Data Officer, his expertise lies in leveraging data-driven innovations to craft immersive customer experiences and optimize operations.",

@@ -1,14 +1,14 @@
 import React from "react";
 import fore from "../../public/img/foreground.png";
+import back from "../../public/img/background.jpg";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
 
 export const AdvancedBannerTop = () => {
   const background: BannerLayer = {
-    image:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/banner-background.jpg",
+    image: back.src,
     translateY: [0, 50],
-    opacity: [1, 0.3],
+    opacity: [0.5, 0.3],    
     scale: [1.05, 1, "easeOutCubic"],
     shouldAlwaysCompleteAnimation: true,
   };

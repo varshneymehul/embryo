@@ -48,7 +48,7 @@ const Sidebar = ({ toggle, handleClick }) => {
                 onClick={handleClick}
                 className={`${
                   toggle ? "opacity-100" : "opacity-0"
-                }  hover:text-transparent hover:bg-clip-text hover:from-blue-200 hover:to-fuchsia-300 hover:background-animate hover:bg-gradient-to-br lowercase font-serif text-white py-2 delay-500 transition-opacity`}
+                }  hover:text-transparent hover:bg-clip-text hover:from-blue-200 hover:to-fuchsia-300 hover:background-animate hover:bg-gradient-to-br uppercase font-serif text-white py-2 delay-500 transition-opacity`}
               >
                 <Link href={link.link}>{link.name}</Link>
               </li>

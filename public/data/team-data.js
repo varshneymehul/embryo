@@ -53,7 +53,7 @@ const teamdata = [
     imgsrc: "/img/team/aryan.jpeg",
     posts: ["Oasis Joint Cordinator", "Operations & Social Media Team Lead"],
     linkedin: "https://www.linkedin.com/in/aryanjain3005/",
-    email: "mailto:f20221226@pilani.bits-pilani.ac.in",
+    email: "mailto:f20220120@pilani.bits-pilani.ac.in",
   },
 ];
 export default teamdata;

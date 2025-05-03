@@ -44,7 +44,7 @@ const teamdata = [
   {
     name: "Manas Chowdhary",
     imgsrc: "/img/team/manas.jpeg",
-    posts: ["Oasis Cordinator"],
+    posts: ["Oasis Coordinator","APOGEE Joint Cordinator","Pub Team Lead"],
     linkedin: "https://www.linkedin.com/in/manas-chowdhary-a1421224b/",
     email: "mailto:f20220961@pilani.bits-pilani.ac.in",
   },

@@ -15,7 +15,7 @@ import PanelData from "./components/panel/ImageData/ImageData";
 import LogoCarousel from "./components/LogoCarousel";
 
 import partners from "./apogee-innovation-challenge/partner-data";
-import teamdata from "../public/data/team-data";
+import teamdata from "../public/data/team-data-23";
 
 import {
   FaFacebook,
@@ -145,7 +145,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="md:grid px-4 md:px-8 w-screen md:grid-cols-4 md:gap-4">
+        <div className="md:grid px-4 md:px-8 w-screen md:grid-cols-2 lg:grid-cols-5">
           {teamdata.map((data) => (
             <TeamCard
               key={data.name}

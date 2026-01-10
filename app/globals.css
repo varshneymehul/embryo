@@ -36,10 +36,14 @@ body {
   --sb-track-color: #17161f;
   --sb-thumb-color: #635a5a;
   --sb-size: 12px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 ::selection {
-  background: #7a000000;
-  text-shadow: #fc0 1px 0 10px;
+  background: rgba(255, 204, 0, 0.3);
+  text-shadow: none;
+  color: white;
 }
 .headline {
   font-family: "Analogue", Helvetica, Arial, sans-serif;
@@ -52,9 +56,13 @@ body {
 }
 .backdrop-2 {
   /* From https://css.glass */
-  background: #17161f;
+  background: rgba(23, 22, 31, 0.7);
   border-radius: 16px;
   padding: 5vw;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 .full {
   height: 100vh;

@@ -12,7 +12,9 @@ export default function CursorGlow({ color = "white" }) {
       mouse.current.y = e.clientY;
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+
+    let animationFrameId;
 
     const animate = () => {
       // Smoothly interpolate position
@@ -26,11 +28,14 @@ export default function CursorGlow({ color = "white" }) {
         }px, 0)`;
       }
 
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
     };
 
     animate();
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
   return (
@@ -40,6 +45,7 @@ export default function CursorGlow({ color = "white" }) {
       style={{
         backgroundColor: color,
         transition: "opacity 0.3s ease",
+        willChange: "transform", // Hint to browser for optimization
       }}
     />
   );

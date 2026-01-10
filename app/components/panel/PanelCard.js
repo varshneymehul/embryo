@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,29 +25,29 @@ const PanelCard = ({ src, title, description, link }) => {
 
   return (
     <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={handleClick}
-      className="group relative w-auto h-auto rounded-lg p-4 m-4 bg-stone-800 backdrop-blur-lg shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:z-10 cursor-pointer"
+      onMouseEnter={ handleMouseEnter }
+      onMouseLeave={ handleMouseLeave }
+      onClick={ handleClick }
+      className="group relative w-auto rounded-lg p-4 bg-stone-800/80 backdrop-blur-md shadow-lg transform transition-all duration-300 ease-out hover:scale-[1.02] hover:z-10 cursor-pointer border border-white/5 hover:border-white/10 h-full"
     >
-      {/* Base card image + title */}
-      <div className="flex flex-col items-center transition-all duration-500 ease-in-out">
+      {/* Base card image + title */ }
+      <div className="flex flex-col items-center">
         <Image
-          className="object-cover aspect-square rounded-lg w-full h-auto transition-all duration-500 ease-in-out"
-          src={src}
-          alt={title}
-          width={400}
-          height={400}
+          className="object-cover aspect-square rounded-lg w-full h-auto"
+          src={ src }
+          alt={ title }
+          width={ 400 }
+          height={ 400 }
         />
         <p className="text-xl md:text-2xl font-bold font-sans_heading text-center pt-4">
-          {title}
+          { title }
         </p>
       </div>
 
-      {/* Popout overlay */}
-      {showPopout && (
+      {/* Popout overlay */ }
+      { showPopout && (
         <div
-          className="absolute top-0 left-0 z-50 w-full h-full max-h-[32rem] bg-stone-900 text-white rounded-lg overflow-y-auto transition-all duration-500 ease-in-out
+          className="absolute top-0 left-0 z-50 w-full h-full max-h-[32rem] bg-stone-900 text-white rounded-lg overflow-y-auto animate-in fade-in zoom-in-95 duration-200
           [&::-webkit-scrollbar]:w-2
           [&::-webkit-scrollbar-track]:rounded-full
           [&::-webkit-scrollbar-track]:bg-gray-100
@@ -57,27 +58,27 @@ const PanelCard = ({ src, title, description, link }) => {
         >
           <div className="relative w-full h-4/5 mb-2">
             <Image
-              src={src}
-              alt={title}
+              src={ src }
+              alt={ title }
               fill
               className="object-cover rounded-lg"
             />
             <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-stone-900 to-transparent rounded-b-lg" />
           </div>
           <div className="p-4">
-            <p className="text-lg font-semibold pb-1">{title}</p>
-            <p className="text-sm pb-2">{description}</p>
+            <p className="text-lg font-semibold pb-1">{ title }</p>
+            <p className="text-sm pb-2">{ description }</p>
             <Link
               target="_blank"
               rel="noreferrer"
               className="text-blue-400 hover:text-blue-200 underline text-sm"
-              href={link}
+              href={ link }
             >
-              {link}
+              { link }
             </Link>
           </div>
         </div>
-      )}
+      ) }
     </div>
   );
 };

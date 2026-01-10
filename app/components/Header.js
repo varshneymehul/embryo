@@ -5,26 +5,16 @@ import logo from "../../public/logo-white.png";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Sidebar from "./Sidebar";
+import { motion, useScroll, useTransform } from "framer-motion";
+
 function Header(props) {
-  const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const newOffset = window.scrollY;
-      if (newOffset > 600) {
-        setOffset(600);
-      } else {
-        setOffset(newOffset);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+  const { scrollY } = useScroll();
+  
+  // Transform scrollY to blur and opacity values directly without re-rendering
+  const backdropBlur = useTransform(scrollY, [0, 600], ["blur(0px)", "blur(12px)"]);
+  const logoOpacity = useTransform(scrollY, [0, 600], [0, 1]);
+  
+  // We still need a small state for the hamburger menu, but it won't be triggered by scroll
   const [toggle, setToggle] = useState(false);
   const handleToggle = (checked) => {
     setToggle(!toggle);
@@ -33,23 +23,25 @@ function Header(props) {
       elm.click();
     }
   };
+
   return (
-    <header
+    <motion.header
       style={{
-        WebkitBackdropFilter: `blur(${offset / 50}px)`,
-        backdropFilter: `blur(${offset / 50}px)`,
+        backdropFilter: backdropBlur,
+        WebkitBackdropFilter: backdropBlur,
       }}
       className="header flex justify-center"
     >
       <div className="cover flex justify-center">
         <Link href={"/"}>
-          <Image
-            style={{ opacity: offset / 600 }}
-            className={`logo ${props.page === 0 ? "out" : ""} w-20 md:w-24`}
-            width={200}
-            src={logo}
-            alt="logo"
-          />
+          <motion.div style={{ opacity: logoOpacity }}>
+            <Image
+              className={`logo ${props.page === 0 ? "out" : ""} w-20 md:w-24`}
+              width={200}
+              src={logo}
+              alt="logo"
+            />
+          </motion.div>
         </Link>
       </div>
       <div className="mx-4 fixed right-0 z-10 menu-hamburger">
@@ -61,7 +53,7 @@ function Header(props) {
         </label>
       </div>
       <Sidebar toggle={toggle} handleClick={handleToggle} />
-    </header>
+    </motion.header>
   );
 }
 

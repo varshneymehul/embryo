@@ -25,6 +25,23 @@ import {
 } from "react-icons/fa";
 import lecturesData from "./lectures/lecture-data";
 import { IoIosCall, IoMdMail } from "react-icons/io";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between overflow-hidden dark:text-white">
@@ -32,8 +49,15 @@ export default function Home() {
         <AdvancedBannerTop />
       </ParallaxProvider>
 
-      {/* about us */}
-      <section id="about-us" className="backdrop-2 m-16">
+      {/* about us */ }
+      <motion.section
+        id="about-us"
+        className="backdrop-2 m-16"
+        initial="hidden"
+        whileInView="visible"
+        viewport={ { once: true, margin: "-100px" } }
+        variants={ fadeInUp }
+      >
         <h1 className="text-4xl text-center font-serif md:text-6xl">
           ABOUT US
         </h1>
@@ -61,40 +85,79 @@ export default function Home() {
           />
         </div>
 
-        <Button text={"Read More"} link={"/about"} />
-      </section>
-      {/* lectures */}
-      <section id="lectures">
-        <h1 className="text-4xl text-center font-serif md:text-6xl">
+        <Button text={ "Read More" } link={ "/about" } />
+      </motion.section>
+
+      {/* lectures */ }
+      <motion.section
+        id="lectures"
+        initial="hidden"
+        whileInView="visible"
+        viewport={ { once: true, margin: "-100px" } }
+        variants={ staggerContainer }
+      >
+        <motion.h1
+          variants={ fadeInUp }
+          className="text-4xl text-center font-serif md:text-6xl"
+        >
           LECTURES
-        </h1>
+        </motion.h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 m-6 md:m-12">
-          {lecturesData.slice(0, 4).map((lecture, idx) => (
-            <LectureCard
-              key={idx}
-              title={lecture.title}
-              img={lecture.imgSrc}
-              name={lecture.name}
-              linkedin={lecture.linkedin}
-              description={lecture.description}
-            />
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 m-6 md:m-8">
+          { lecturesData.slice(0, 4).map((lecture, idx) => (
+            <motion.div key={ idx } variants={ fadeInUp } className="h-full">
+              <LectureCard
+                title={ lecture.title }
+                img={ lecture.imgSrc }
+                name={ lecture.name }
+                linkedin={ lecture.linkedin }
+                description={ lecture.description }
+              />
+            </motion.div>
+          )) }
         </div>
 
-        <Button text={"View All"} link={"/lectures"} />
-      </section>
-      {/* panels */}
-      <section id="panel" className="my-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
-          {PanelData.map((data) => (
-            <PanelCard key={data.title} {...data} />
-          ))}
+        <motion.div variants={ fadeInUp }>
+          <Button text={ "View All" } link={ "/lectures" } />
+        </motion.div>
+      </motion.section>
+
+      {/* panels */ }
+      <motion.section
+        id="panel"
+        className="my-16"
+        initial="hidden"
+        whileInView="visible"
+        viewport={ { once: true, margin: "-100px" } }
+        variants={ staggerContainer }
+      >
+        <motion.h1
+          variants={ fadeInUp }
+          className="text-4xl text-center font-serif md:text-6xl"
+        >
+          PANELS
+        </motion.h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 m-6 md:m-8">
+          { PanelData.map((data) => (
+            <motion.div key={ data.title } variants={ fadeInUp } className="h-full">
+              <PanelCard { ...data } />
+            </motion.div>
+          )) }
         </div>
-        <Button text="View More" link="/panels" />
-      </section>
-      {/* aic */}
-      <section id="aic">
+        <motion.div variants={ fadeInUp }>
+          <Button text="View More" link="/panels" />
+        </motion.div>
+      </motion.section>
+
+      {/* aic */ }
+      <motion.section
+        id="aic"
+        initial="hidden"
+        whileInView="visible"
+        viewport={ { once: true, margin: "-100px" } }
+        variants={ fadeInUp }
+      >
         <h1 className="text-4xl mx-16 mt-24 mb-4 text-center font-serif md:text-6xl">
           APOGEE INNOVATION CHALLENGE
         </h1>
@@ -107,59 +170,84 @@ export default function Home() {
 
         <div className="w-screen flex flex-col md:flex-row justify-center md:justify-evenly p-12">
           <AicCard
-            heading={"What is AIC?"}
-            content={[
+            heading={ "What is AIC?" }
+            content={ [
               "Problem statement released by companies",
               "Students form teams of 1 to 3 members",
               "Teams select problem statements and start working on it. They have to submit the solution before the specified deadline.",
               "Judges from companies select top 5 teams",
               "Winners are usually rewarded in terms of cash prizes, internships or goodies",
-            ]}
+            ] }
           />
           <AicCard
-            heading={"Why participate?"}
-            content={[
+            heading={ "Why participate?" }
+            content={ [
               "By associating with APOGEE Innovation Challenge, the company becomes an event partner of APOGEE and would be publicised on the APOGEE website and Facebook page.",
               "The company can use the ingenuity of some of the brightest young minds of the country to get a pool of innovative approaches for solving a particular problem",
               "Being one of the major events of apogee and a unique concept, this event would get wide media coverages from leading media sources in India.",
-            ]}
+            ] }
           />
         </div>
         <h2 className="text-2xl uppercase mx-16 mt-24 mb-4 text-center font-serif md:text-4xl">
           Our Previous Partners
         </h2>
-        <LogoCarousel images={partners} speed={20000} />
-        <Button text={"Read More"} link={"/apogee-innovation-challenge"} />
-      </section>
-      {/* team */}
-      <section id="team" className="my-12 md:m-16">
-        <h1 className="text-4xl text-center font-serif md:text-6xl">TEAM</h1>
+        <LogoCarousel images={ partners } speed={ 80000 } />
+        <Button text={ "Read More" } link={ "/apogee-innovation-challenge" } />
+      </motion.section>
 
-        <div className="flex justify-center m-4 md:m-12">
+      {/* team */ }
+      <motion.section
+        id="team"
+        className="my-12 md:m-16"
+        initial="hidden"
+        whileInView="visible"
+        viewport={ { once: true, margin: "-100px" } }
+        variants={ staggerContainer }
+      >
+        <motion.h1
+          variants={ fadeInUp }
+          className="text-4xl text-center font-serif md:text-6xl"
+        >
+          TEAM
+        </motion.h1>
+
+        <motion.div
+          variants={ fadeInUp }
+          className="flex justify-center m-4 md:m-12"
+        >
           <TeamCard
-            imgsrc={VaidyaSir}
+            imgsrc={ VaidyaSir }
             name="DR. RISHIKESH VAIDYA"
-            posts={["Faculty-in-Charge"]}
+            posts={ ["Faculty-in-Charge"] }
             linkedin="https://www.linkedin.com/in/rishikesh-vaidya-8a61344a/"
             email="mailto:rishikesh@pilani.bits-pilani.ac.in"
           />
-        </div>
+        </motion.div>
 
-        <div className="md:grid px-4 md:px-8 w-screen md:grid-cols-2 lg:grid-cols-5">
-          {teamdata.map((data) => (
-            <TeamCard
-              key={data.name}
-              imgsrc={data.imgsrc}
-              name={data.name}
-              posts={data.posts}
-              linkedin={data.linkedin}
-              email={data.email}
-            />
-          ))}
+        <div className="md:grid px-4 md:px-8 w-screen md:grid-cols-2 lg:grid-cols-5 gap-4">
+          { teamdata.map((data) => (
+            <motion.div key={ data.name } variants={ fadeInUp } className="h-full">
+              <TeamCard
+                imgsrc={ data.imgsrc }
+                name={ data.name }
+                posts={ data.posts }
+                linkedin={ data.linkedin }
+                email={ data.email }
+              />
+            </motion.div>
+          )) }
         </div>
-      </section>
-      {/* Contact us */}
-      <section id="contact" className="md:w-1/2 m-6 md:m-12">
+      </motion.section>
+
+      {/* Contact us */ }
+      <motion.section
+        id="contact"
+        className="md:w-1/2 m-6 md:m-12"
+        initial="hidden"
+        whileInView="visible"
+        viewport={ { once: true, margin: "-100px" } }
+        variants={ fadeInUp }
+      >
         <h1 className="text-4xl text-center font-serif md:text-6xl">
           CONTACT US
         </h1>
@@ -200,7 +288,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* embryo links */}
+        {/* embryo links */ }
         <div className="mx-auto flex text-xl md:text-3xl justify-center gap-5">
           <a
             href="https://www.facebook.com/EmbryoClub/"
@@ -224,7 +312,7 @@ export default function Home() {
             <FaLinkedin className="cursor-pointer  transition-all  hover:text-blue-800" />
           </a>
         </div>
-      </section>
+      </motion.section>
     </main>
   );
 }

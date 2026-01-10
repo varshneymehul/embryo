@@ -3,7 +3,7 @@ import React from "react";
 
 const Button = ({ text, link }) => {
   return (
-    <div className="w-fit ml-auto mx-12">
+    <div className="w-fit ml-auto mx-12 my-8">
       <Link href={link}>
         <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-sm font-semibold leading-6  text-white inline-block">
           <span className="absolute inset-0 overflow-hidden rounded-full">

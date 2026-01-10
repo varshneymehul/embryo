@@ -182,9 +182,9 @@ export default function Home() {
             <div>
               <a
                 className="text-sm md:text-xl"
-                href="mailto:f20220919@pilani.bits-pilani.ac.in"
+                href="mailto:f20230335@pilani.bits-pilani.ac.in"
               >
-                f20220919@pilani.bits-pilani.ac.in
+                f20230335@pilani.bits-pilani.ac.in
               </a>
             </div>
           </div>
@@ -193,8 +193,8 @@ export default function Home() {
               <IoIosCall className="text-3xl m-4" />
             </div>
             <div>
-              <a className="text-sm md:text-xl" href="tel:+917696024085">
-                +91 7696024085
+              <a className="text-sm md:text-xl" href="tel:+918840101447">
+                +91 8840101447
               </a>
             </div>
           </div>

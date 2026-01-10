@@ -3,7 +3,6 @@ import cat24 from "./catchamps24.jpg";
 import pf from "./perspectivesunfolded2.png";
 import p2r from "./research2passport.jpg";
 const PanelData = [
-  
   {
     src: p2r,
     title: "Passport to Research 2024",

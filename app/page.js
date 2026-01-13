@@ -139,7 +139,7 @@ export default function Home() {
         </motion.h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 m-6 md:m-8">
-          { PanelData.map((data) => (
+          { PanelData.slice(0, 4).map((data) => (
             <motion.div key={ data.title } variants={ fadeInUp } className="h-full">
               <PanelCard { ...data } />
             </motion.div>

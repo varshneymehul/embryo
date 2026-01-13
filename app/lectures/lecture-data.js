@@ -1,9 +1,93 @@
 const lecturesData = [
   {
+    title: "Turning Data Into Demand",
+    name: "Vasudev K Kataria",
+    description: "Vasudev K. Kataria is a seasoned business leader with deep expertise in data-driven marketing and growth strategy. He specializes in transforming insights from data into actionable demand that drives measurable business impact.",
+    recordingUrl: "",
+    imgSrc: "/img/lec/vasudev_kataria.jpg",
+    date: "11 January, 2026",
+    linkedin: "https://www.linkedin.com/in/vasudevkennykataria",
+  }
+  ,
+  {
+    title: "National Security and the Spirit of Sports: Shaping Leaders for Tomorrow",
+    name: "Lt Gen Balbir Singh Sandhu",
+    description: "Lt Gen Balbir Singh Sandhu is a distinguished Indian Army veteran with decades of experience in leadership, strategy, and national security.He is known for inspiring future leaders through lessons drawn from military service, discipline, and the spirit of sports.",
+    recordingUrl: "https://youtu.be/ovsEF6ntbkQ?si=py3TWOIAVFSH2XYo",
+    imgSrc: "/img/lec/lt_gen_balbir_sandhu.jpg",
+    date: "6 September, 2025",
+    linkedin: "https://www.linkedin.com/in/lt-gen-balbir-sandhu",
+  }
+  ,
+
+  {
+    title: "Leadership, Inclusion, and the Power of Sports",
+    name: "Madhavi Latha",
+    description: "Madhavi Latha is an accomplished leader and athlete, widely recognized for her contributions to inclusion, resilience, and empowerment through sports. She leverages her experiences to inspire leadership, break barriers, and promote equal opportunities across communities.",
+    recordingUrl: "",
+    imgSrc: "/img/lec/madhavi_latha.jpg",
+    date: "24 August, 2025",
+    linkedin: "linkedin.com/in/madhavi-latha-prathigudupu-0b65a341",
+  }
+  ,
+  {
+    title: "Building Resumes That Win",
+    name: "Ritika",
+    description: "Ritika is the co-founder of GoResume, a career-focused platform dedicated to helping students and professionals build strong, impactful resumes. She brings practical insights into personal branding, resume strategy, and standing out in competitive job markets.",
+    recordingUrl: "",
+    imgSrc: "/img/lec/ritika.jpg",
+    date: "16 August, 2025",
+    linkedin: "linkedin.com/in/ritikaa-tl",
+  }
+  ,
+
+  {
+    title: "Cracking CAT: A Strategic Roadmap to IIMs",
+    name: "Shivam Kumar",
+    description: "Shivam Kumar is an IIM Bangalore alumnus and a top CAT performer with an exceptional 99.95 percentile score. He specializes in strategic CAT preparation, mentoring aspirants with proven techniques for cracking India’s toughest management entrance exam.",
+    recordingUrl: "",
+    imgSrc: "/img/lec/shivam_kumar.jpg",
+    date: "13 July, 2025",
+    linkedin: "linkedin.com/in/shivam-kumar-bits319",
+  }
+  ,
+
+  {
+    title: "The EV Revolution",
+    name: "Rajeev Chaba",
+    description: "Rajeev Chaba is the CEO of Emeritus and a veteran business leader with extensive experience in automotive, education, and technology-driven transformation.He is widely recognized for his leadership in driving innovation, scaling organizations, and shaping the future of learning and mobility.",
+    recordingUrl: "",
+    imgSrc: "/img/lec/rajeev_chaba.jpg",
+    date: "9 July, 2025",
+    linkedin: "linkedin.com/in/rajeev-chaba-b58b284",
+  }
+  ,
+
+  {
+    title: "The Power of Reinvention: From Public Sector to Tech Giant",
+    name: "Arundhati Bhattacharya",
+    description: "Arundhati Bhattacharya is a renowned business leader and former Chairperson of the State Bank of India, known for driving large-scale institutional transformation.She currently serves as Chairperson and CEO of Salesforce India, championing innovation, leadership, and inclusive growth.",
+    recordingUrl: "https://youtu.be/tiu02tLFZtU?si=XexUAy-bM2rebITb",
+    imgSrc: "/img/lec/arundhati_bhattacharya.jpg",
+    date: "30 June, 2025",
+    linkedin: "linkedin.com/in/arundhati-bhattacharya-salesforce",
+  }
+  ,
+  {
+    title: "Shaurya, Service, and Nation Building",
+    name: "Col. Vembu Shankar",
+    description: "Col. Vembu Shankar is a decorated Indian Army officer known for his courage, leadership, and commitment to service.He inspires audiences with powerful insights on shaurya, nation building, and values-driven leadership shaped by military life.",
+    recordingUrl: "https://youtu.be/yhqHU7Bhs5w?si=y2hs1vuD-uAi6jEI",
+    imgSrc: "/img/lec/col_vembu_shankar.jpg",
+    date: "22 June, 2025",
+    linkedin: "linkedin.com/in/vembushankar",
+  }
+  ,
+  {
     title: "Inside Automotive Design",
     name: "Ramkripa Ananthan",
     description:
-      "The top GRE scorers share their strategies, preparation techniques, and expert insights to help the students ace the test!",
+      "With a Mechanical Engineering degree from BITS Pilani and a Master's in Design from IIT Bombay, she brings a powerful blend of engineering precision and design innovation. Her visionary work has shaped iconic vehicles like the XUV700 and the Thar, redefining automotive design in India.",
     recordingUrl: "",
     imgSrc: "/img/lec/Ramkripa-Ananthan.jpg",
     date: "6 April, 2025",
@@ -365,7 +449,7 @@ const lecturesData = [
     description:
       "Ritika Karnani is an alumnus of BITS Pilani and graduated in 2015. She recently completed her MBA from INSEAD, France",
     recordingUrl: "",
-    imgSrc: "/img/lec/ritika.jpg",
+    imgSrc: "/img/lec/ritika_karnani.jpg",
     date: "21 March, 2021",
     linkedin: "https://www.linkedin.com/in/ritika-karnani/",
   },

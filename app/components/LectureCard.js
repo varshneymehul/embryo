@@ -32,7 +32,7 @@ const LectureCard = ({ title, img, linkedin, description, name }) => {
       {/* Card image and title */ }
       <div className="flex flex-col items-center">
         <Image
-          className="object-cover aspect-square rounded-lg w-full h-auto max-h-64"
+          className="object-cover aspect-square rounded-lg w-full h-auto"
           src={ img }
           alt="lecturer-image"
           width={ 300 }

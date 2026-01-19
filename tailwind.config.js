@@ -12,8 +12,8 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      serif: ["Larken", "serif"],
-      sans_heading: ["Analogue", "sans-serif"],
+      serif: ["var(--font-larken)", "serif"],
+      sans_heading: ["var(--font-analogue)", "sans-serif"],
     },
     extend: {
       animation: {

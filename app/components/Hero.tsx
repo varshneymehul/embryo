@@ -1,6 +1,6 @@
 import React from "react";
-import fore from "../../public/img/foreground.png";
-import back from "../../public/img/background.png";
+import fore from "../../public/img/foreground.webp";
+import back from "../../public/img/background.webp";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
 
@@ -8,7 +8,7 @@ export const AdvancedBannerTop = () => {
   const background: BannerLayer = {
     image: back.src,
     // translateY: [0, 50],
-    opacity: [0.5, 0.3],    
+    opacity: [0.5, 0.3],
     scale: [1.05, 1, "easeOutCubic"],
     shouldAlwaysCompleteAnimation: true,
   };
@@ -44,7 +44,7 @@ export const AdvancedBannerTop = () => {
 
   return (
     <ParallaxBanner
-      layers={[background, headline, foreground, gradientOverlay]}
+      layers={ [background, headline, foreground, gradientOverlay] }
       className="full"
     />
   );

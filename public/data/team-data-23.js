@@ -70,7 +70,7 @@ const teamdata = [
   {
     name: "Khushil Aggarwal",
     imgsrc: "/img/team/23/khushil.jpeg",
-    posts: ["Oasis Joint Coordinator"],
+    posts: ["Oasis Joint Coordinator", "Operations Team Lead"],
     linkedin:
       "https://www.linkedin.com/in/khushil-aggarwal-2a588a28b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     email: "mailto:f20230399@pilani.bits-pilani.ac.in",

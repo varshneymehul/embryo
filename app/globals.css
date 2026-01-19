@@ -2,17 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Analogue";
-  src: url("../public/font/Analogue85Black.otf") format("opentype");
-}
 
-/* add variable for serif for analogue */
-
-@font-face {
-  font-family: "Larken";
-  src: url("../public/font/LarkenDEMO-Light.otf") format("opentype");
-}
 
 @layer utilities {
   .paused {
